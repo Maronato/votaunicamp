@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+    /*--Toggle Slide Menu--*/
+    $('#btnNavToggle').click(function() {
+
+                if ( $('#content-wrap').hasClass('navOpen') ){
+                    $('#content-wrap').animate({'left': 0}).removeClass('navOpen');
+                } else {
+                    $('#content-wrap').animate({'left': 350}).addClass('navOpen');
+                }
+
+            });
+
+    /*--END Toggle--*/
+
+
+
+
+    $('#myButton').click(function() {
+
+        $('#myModal').modal();
+
+    });
+    </script>
+
+    <script>
+        var $rows = $('#table tr');
+    $('#search').keyup(function() {
+        var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+        $rows.show().filter(function() {
+            var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+            return !~text.indexOf(val);
+        }).hide();
+    });
+    </script>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <title>VotaUnicamp!</title>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    .jumbotron {
+        background: #1A6F1A;
+        color: white;
+        padding-bottom: 30px
+    }
+    .jumbotron .btn-primary {
+        background: #845ac7;
+        border-color: #845ac7
+    }
+    .jumbotron .btn-primary:hover {
+        background: #7646c1
+    }
+    .jumbotron p {
+        color: #d9ccee;
+        max-width: 75%;
+        margin: 1em auto 2em
+    }
+    .navbar+.jumbotron {
+        margin-top: -20px
+    }
+    .jumbotron .lang-logo {
+        display: block;
+        background: #FD0006;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border: 2px solid white
+    }
+    .jumbotron .lang-logo img {
+        max-width: 100%
+    }
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.modal-content2 {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+
+.modal-header {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #5cb85c;
+    color: white;
+}
+
+th
+{
+border-bottom: 1px solid #d6d6d6;
+}
+tr:nth-child(even)
+{
+background:#e9e9e9;
+}
+.ui-table-columntoggle-btn {
+    display: none !important;
+}
+
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+input[type=text] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #1A6F1A;
+  padding: 17px 0px;
+  font-size: 14px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-help{
+  font-size: 12px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+p.vote {
+    width: 30em;
+    word-wrap: break-word;
+}
+
+.inl {
+    display: inline-block;
+}
+
+  </style>
+</head>
+<body>
+
+{% if login_error %}
+<script type="text/javascript">
+    $(window).load(function(){
+        $('#login-modal').modal('show');
+    });
+</script>
+{% endif %}
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            {% if login_error %}
+            <h1>{{login_error}}</h1><br>
+            {% else %}
+            <h1>Entre na sua conta</h1><br>
+            {% endif %}
+            <form action="/login/" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Seu RA">
+                <input type="password" name="password" placeholder="Senha">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="user_info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            {% if login_error %}
+            <h1>{{login_error}}</h1><br>
+            {% else %}
+            <h1>Entre na sua conta</h1><br>
+            {% endif %}
+            <form action="/login/" method="post">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a class="navbar-brand" href="/">Votar</a>
+            </li>
+            <li>
+                <a href="/arguments/"><span class="glyphicon glyphicon-comment"></span> Argumentos</a>
+            </li>
+            <li>
+                <a href="/results/"><span class="glyphicon glyphicon-th-list"></span> Resultados</a>
+            </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-right">
+                {% if user.is_authenticated %}
+            <a href="/logout/"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+            <li class="navbar-right">
+            <a href="/user_info/"><span class="glyphicon glyphicon-user"></span> Você</a>
+            {% else %}
+            <a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            {% endif %}
+            </li>
+        </ul>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+<div class="container">
+    <hr>
+    <div class="alert alert-info text-center" role="alert">
+        <a href="https://github.com/Maronato/votaunicamp/blob/master/README.md#privacy">Política de Privacidade</a>
+    </div>
+</div>
+</body>
+</html>

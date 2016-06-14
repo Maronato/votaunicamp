@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+    <div class="container">
+        <a href="/" class="lang-logo">
+            <img src="{% static 'lang-logo.png'%}">
+        </a>
+        <h1>VotaUnicamp!</h1>
+        <p>Uma plataforma independente para promover votações democráticas na Unicamp.</p>
+        <a type="button" class="btn btn-lg btn-default" href="/arguments/"><span class="glyphicon glyphicon-comment"></span> Ver Argumentos</a>
+        <a type="button" class="btn btn-lg btn-primary" href="/results/"><span class="glyphicon glyphicon-th-list"></span> Ver Resultados</a>
+    </div>
+</div>
+<div class="container">
+    <div class="alert alert-info text-center" role="alert">
+        Essa página não é de forma alguma relacionada com a direção da Unicamp. As informações contidas aqui não refletem as opiniões dessa instituição.
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <h3><span class="glyphicon glyphicon-info-sign"></span>   Atenção!</h3>
+            <ul>
+                <li>O voto alienado é <b>sim</b> seu direito democrático, mas, para a melhor evolução da discussão, é recomendado que você use as informações desse site
+                    e das assembléias para que seu voto realmente reflita seus valores.</li>
+
+                <li>Você sempre pode alterar seu voto, basta votar novamente e seu voto anterior será alterado.</li>
+
+                <li>Esse site <b>não</b> tem a intenção de substituir as assembléias. É apenas uma ferramenta para tornar mais acessíveis o voto e as informações.</li>
+
+                <li>Para garantir total transparência desse processo de votação, todo o código fonte está disponível no <a href="http://github.com/Maronato/votaunicamp/"><svg aria-hidden="true" class="octicon octicon-mark-github" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg> GitHub</a></li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h3><span class="glyphicon glyphicon-comment"></span>   Pautas Atuais</h3>
+            <ul>
+                <li>Exemplo de pauta com <a href="https://google.com">Link</a> e outras bobagens</li>
+                <li>Podemos também criar subpautas:</li>
+                <ul>
+                    <li>Como essa aqui</li>
+                    <li><h4>E essa aqui deve ser bem importante</h3></li>
+                    <li><h6>Essa aqui nem tanto</h6></li>
+                    <li><b> Essa aqui está em negrito</b>, <i>olha só!</i></li>
+                </ul>
+            </ul>
+        </div>
+    </div> <!-- row -->
+    <div class="row">
+        <hr>
+        <form action="/vote-check/#vote" method="post">
+            <div class="col-md-6" id="authcode">
+                {% if not user.is_authenticated %}
+                <h3><span class="glyphicon glyphicon-envelope"></span>    Digite suas informações ou faça o <a href="#" data-toggle="modal" data-target="#login-modal"> <u>Login</u></a></h3>
+                <div class="form-group">
+                    {% csrf_token %}
+                    <label class="control-label">Código de autenticação do atestado de matrícula</label>
+                    <a href="/help/"> O que é isso?</a>
+                    <br>
+                    <input type="text" name="auth_code" id="auth_code" value="{{auth_prev}}">
+                    <h4 style="display:inline;"><span  class="label label-info">{{auth_error}}</span></h4>
+                    <br>
+                    <label class="control-label">Senha (Opcional)</label>
+                    <a href="#" data-toggle="modal" data-target="#pass-Modal"> Pra quê?</a>
+                    <br>
+                    <input name="password" id="password" type="password">
+                    <h4 style="display:inline;"><span  class="label label-info">{{pass_error}}</span></h4>
+                    <br>
+                    <label class="control-label">Confirme a senha</label>
+                    <br>
+                    <input name="passwordconf" id="passwordconf" type="password">
+                </div>
+                {% else %}
+                <h3><span class="glyphicon glyphicon-repeat"></span>  Seu último voto:</h3>
+                </br>
+                <h2>{{user.profile.vote.vote}}</h2>
+                 {% if user.profile.vote.reason %}
+                <h4>
+                <p class="vote">
+                    {{user.profile.vote.reason}}
+                </p></h4>
+                {% else %}
+                <h4>Você não se justificou.</h4>
+                {% endif %}
+                {% endif %}
+
+            </div>
+            <div class="col-md-6" id="vote">
+                <form action="/vote-check/#vote" method="post">
+                    {% csrf_token %}
+                    <h3><span class="glyphicon glyphicon-pencil"></span>   Vote!  </h3>
+                    <div class="form-group">
+                        <label class="control-label">Você é a favor? </label>
+                        <input type="radio" id="vote_0" value="Sim" {{vote_0}} name="vote" />
+                        <label for="vote_0">
+                            Sim
+                        </label>
+                        <input type="radio" id="vote_1" value="Abstenção" {{vote_1}} name="vote" />
+                        <label for="vote_1">
+                            Abstenção
+                        </label>
+                        <input type="radio" id="vote_2" value="Não" {{vote_2}} name="vote" />
+                        <label for="vote_2">
+                            Não
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Justificativa (Opcional):</label>
+                        <textarea class="form-control" name="reason" id="reason">{{reason_prev}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6LcdQSITAAAAAAEKEs1qNRnUXifflw3SHzM3xVKB"></div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                        <h4 style="display:inline;"><span  class="label label-info">{{cap_error}}</span></h4>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+        <!-- Modal -->
+<div class="modal fade" id="pass-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="myModalLabel">Senha? Por quê?</h3>
+            </div>
+            <div class="modal-body">
+                Você não precisa de uma senha. Pode votar normalmente sem ela.
+                <br>
+                Mas só vai poder fazer isso.
+                <br>
+                Para curtir e postar opiniões, além de verificar e alterar seu último voto sem ter que pegar o código de
+                autenticação toda vez, é necessário que você se registre com uma senha. A partir daí, seu login se torna
+                o seu RA e você pode usar o site inteiro, da forma que quiser.
+                <br>
+                <br>
+                <b>Atenção:</b>Se você não quiser criar uma senha agora não tem problema! Você pode criar uma na próxima
+                vez que votar. Basta preencher novamente todos os campos e votar.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+{% endblock %}

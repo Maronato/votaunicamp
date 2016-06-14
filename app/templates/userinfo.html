@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+{% if not user.is_authenticated %}
+<div class="jumbotron text-center">
+    <div class="container">
+
+        <h1>É necessário logar para acessar essa página</h1>
+        <p>Nada mais para ver aqui.</p>
+        <a type="button" class="btn btn-lg btn-warning" href="/"><span class="glyphicon glyphicon-pencil"></span> Votar!</a>
+        <a type="button" class="btn btn-lg btn-default" href="/arguments"><span class="glyphicon glyphicon-comment"></span> Discussão!</a>
+        <a type="button" class="btn btn-lg btn-primary" href="/results/"><span class="glyphicon glyphicon-th-list"></span> Resultados!</a>
+    </div>
+</div>
+{% else %}
+<div class="jumbotron text-center">
+    <div class="container">
+
+        <h1>Olá, {{user.profile.first_name}}</h1>
+        <p>Como vai você?</p>
+        <a type="button" class="btn btn-lg btn-warning" href="/"><span class="glyphicon glyphicon-pencil"></span> Votar!</a>
+        <a type="button" class="btn btn-lg btn-default" href="/arguments"><span class="glyphicon glyphicon-comment"></span> Discussão!</a>
+        <a type="button" class="btn btn-lg btn-primary" href="/results/"><span class="glyphicon glyphicon-th-list"></span> Resultados!</a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3><span class="glyphicon glyphicon-info-sign"></span> Essas são as suas informações que temos:</h3>
+            <ul>
+
+                <li>Seu nome: {{user.profile.name}}</li>
+
+                <li>Seu RA: {{user.profile.ra}}</li>
+
+                <li>Seu RG: {{user.profile.rg}} (Salvo dessa forma)</li>
+
+                <li>Seu curso: {{user.profile.course}}</li>
+
+            </ul>
+        </div>
+        <div class="col-md-6">
+              <h3><span class="glyphicon glyphicon-remove"></span> Não curti</h3>
+            <ul>
+                Se não aprova que alguma dessas informações esteja aqui, me contate por um dos meios a seguir:
+                <li>
+                    <a href="http://facebook.com/gustavo.maronato">Facebook</a>
+                </li>
+                <li>
+                    Telegram, <a href="https://telegram.me/GustavoMaronato">@GustavoMaronato</a>
+                </li>
+                <li>
+                    Ou por email: votaunicamp@gmail.com
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        {% if not args %}
+        <h3><span class="glyphicon glyphicon-repeat"></span> Você ainda não postou nenhuma opinião na discussão</h3>
+        {% else %}
+        <h3><span class="glyphicon glyphicon-repeat"></span> E essas são as opiniões que você já postou:</h3>
+
+    </div>
+
+
+    <div class="row">
+        {% for arg in args %}
+        <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
+        <ul>
+            {{arg.text}}
+            <br>
+            <br>
+            <form class="inl" action="/delete_comment/" method="POST" id="{{arg.id}}">
+                {% csrf_token %}
+                <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-trash"></span></button>
+            </form>
+            <hr>
+        </ul>
+        {% endfor %}
+        {% endif %}
+
+
+    </div>
+
+
+
+<!--<script type="text/javascript">
+    $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+</script>
+        <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 id="modal-head" class="modal-title">Pode parar!</h2>
+			</div>
+			<div class="modal-body">
+				Essa página ainda não está pronta. Pretendo fazer muita coisa com ela, e isso deve demorar um pouco.
+                Você pode dar uma olhada enquanto isso, mas não se desespere se todos os botões estiverem errados e você
+                ficar preso aqui pra sempre! Muahahaha
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+            <!-- Modal -->
+<div id="commentModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content2">
+			<div class="modal-header">
+				<h2 id="modal-head" class="modal-title">Compartilhe suas opiniões!</h2>
+			</div>
+			<div class="modal-body">
+                <form action="/submit_comment/" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="control-label"><h4>Esse texto será a favor ou contra a pauta autal?</h4> </label>
+                        </br>
+                        <input type="radio" id="vote_0" value="Sim" checked="checked" name="vote" />
+                        <label for="vote_0">
+                         A favor!
+                        <input type="radio" id="vote_1" value="Não" name="vote" />
+                        <label for="vote_1">
+                            Contra!
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="title" required placeholder="Título" id="text">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="text" rows="3" required placeholder="(Sua opinião vai aqui)" id="text"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Mandar-ver!</button>
+                    </div>
+                </form>
+                </br>
+				Lembre-se: <b>Não</b> serão tolerados comentários preconceitosos, racistas, discriminatórios ou qualquer
+                    outro do gênero.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+{% endif %}
+{% endblock %}

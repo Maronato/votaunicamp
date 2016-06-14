@@ -1,0 +1,10 @@
+venv
+*.pyc
+staticfiles
+.env
+db.sqlite3
+.idea/
+app/DACInfo/__pycache__/
+app/__pycache__/
+app/migrations/__pycache__/
+gettingstarted/__pycache__/

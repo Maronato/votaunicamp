@@ -1,0 +1,67 @@
+
+
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>Ajuda!</h1>
+        <p>Onde consigo meu Código de Autenticação do Atestado de Matrícula?</p>
+        <a type="button" class="btn btn-lg btn-info" href="/"><span class="glyphicon glyphicon-pencil"></span> Vote!</a>
+        <a type="button" class="btn btn-lg btn-warning" href="/arguments/"><span class="glyphicon glyphicon-comment"></span> Discuta!</a>
+        <a type="button" class="btn btn-lg btn-danger" href="/results/"><span class="glyphicon glyphicon-comment"></span> Resultados!</a>
+    </div>
+</div>
+<div class=container>
+    <h3>
+        <p>
+            Para conseguir seu código de autenticação do seu atestado de matrícula você deve acessar os
+            <a target="_blank" href="https://www.daconline.unicamp.br/servlet/pckAcadAlunoServicosGerais.ControleLimpaSessionEntradaAluno"><u>Serviços Acadêmicos</u></a>
+            da sessão de Alunos no site da DAC.
+        </p>
+        <br>
+        <img src="{% static 'voto1.png'%}"width="700">
+        <hr>
+        <p>
+            Depois de inserir seus dados e logar, vá até 'Graduação' em 'Relatórios' e selecione 'Atestado de Matrícula':
+        </p>
+        <img src="{% static 'voto2.png'%}"width="700">
+        <hr>
+        <p>
+            Clique em 'Solicitar nova versão'
+        </p>
+        <br>
+        <img src="{% static 'voto3.png'%}"width="700">
+        <hr>
+        <p>
+            Marque seu curso e selecione '<b>Não</b>' para 'Exibir horários das disciplinas matriculadas' e para 'Exibir coeficiente de rendimento e classificação na turma?'
+            <br>
+            Clique em 'Confirmar'
+        </p>
+        <br>
+        <img src="{% static 'voto4.png'%}"width="700">
+        <hr>
+        <p>
+            O documento deve aparecer na sua tela, ou ser baixado para seu computador.
+        </p>
+        <br>
+        <img src="{% static 'voto5.png'%}"width="700">
+        <hr>
+        <p>
+            Ao final do arquivo você encontrará o Código.
+            Copie ele e cole na área especificada.
+        </p>
+        <br>
+        <img src="{% static 'voto6.png'%}"width="700">
+
+
+
+
+    </h3>
+</div>
+
+
+
+
+{% endblock %}

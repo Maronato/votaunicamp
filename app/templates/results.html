@@ -1,0 +1,124 @@
+
+
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>Resultados parciais!</h1>
+        <p>Sobre a pauta (Pauta atual aqui)</p>
+        <a type="button" class="btn btn-lg btn-danger" href="/"><span class="glyphicon glyphicon-pencil"></span> Vote!</a>
+        <a type="button" class="btn btn-lg btn-info" href="/arguments/"><span class="glyphicon glyphicon-comment"></span> Discuta!</a>
+    </div>
+</div>
+<div class=container>
+    <h2>Votos totais:</h2>
+    <div class="container-fluid table-responsive">
+        <table data-role="table" class="table table-striped">
+            <tr>
+                <th>Total</th>
+                <th>Sim</th>
+                <th>Abstenções</th>
+                <th>Não</th>
+            </tr>
+            <tr>
+                <td>{{total}}</td>
+                <td>{{yes}}</td>
+                <td>{{abs}}</td>
+                <td>{{no}}</td>
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <h3>Votos por curso:</h3>
+    <div class="container-fluid table-responsive">
+        <table data-role="table" class="table table-striped">
+            <tr>
+                <th>Curso</th>
+                <th>Total</th>
+                <th>Sim</th>
+                <th>Abstenções</th>
+                <th>Não</th>
+            </tr>
+            {% for inst in insts %}
+            <tr>
+                {% for ins in inst %}
+                <td>{{ins}}</td>
+                {% endfor %}
+            {% endfor %}
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <h4>Detalhes de cada voto:</h4>
+    <input type="search" id="search" class="light-table-filter form-control" data-table="order-table" placeholder="Pesquisar votos...">
+    <table id="table" class="table table-striped order-table">
+        <thead>
+        <tr>
+            <th data-priority="6">Nome</th>
+            <th data-priority="1">RA</th>
+            <th data-priority="1">Curso</th>
+            <th data-priority="1">Voto</th>
+            <th data-priority="3">Justificativa</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for info in infos %}
+        <tr>
+            <td>{{info.first_name}}</td>
+            <td>{{info.ram}}</td>
+            <td>{{info.course}}</td>
+            <td>{{info.vote.vote}}</td>
+            {%if not info.vote.reason%}
+            <td>-</td>
+            {%else%}
+            <td><button class="btn btn-success" onclick="myFunction('{{info.vote.reason}}')" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+            {%endif%}
+        </tr>
+        {%endfor%}
+
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="modal-head" class="modal-title">Justificativa:</h4>
+            </div>
+            <div class="modal-body">
+                <p id="modal-text"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var $rows = $('#table tr');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+</script>
+
+{% endblock %}
