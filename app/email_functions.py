@@ -70,7 +70,7 @@ def set_prevalues(vote, reason, auth_code):
     return prevalues
 
 
-def vote_user_create(ra, name, rg, course, password, vote, reason, prevalues):
+def vote_user_create(ra, name, rg, course, password, vote, reason, prevalues, request):
     course, rg, ram, first_name = normalize_data(course, rg, ra, name)
     try:
         #   Check if user exists
@@ -81,13 +81,17 @@ def vote_user_create(ra, name, rg, course, password, vote, reason, prevalues):
         if password:
             a.profile.active = True
             a.set_password(password)
-            prevalues['cap_error'] = "Usuário adicionado com sucesso"
+            prevalues['cap_error'] = "Usuário e voto adicionado com sucesso"
         else:
             prevalues['cap_error'] = "Voto atualizado com sucesso"
         a.profile.vote.vote, a.profile.vote.reason = vote, reason
         a.profile.vote.save()
         a.profile.save()
         a.save()
+        user = authenticate(username=ra, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
         return prevalues
     except User.DoesNotExist:
         if password:
@@ -98,7 +102,11 @@ def vote_user_create(ra, name, rg, course, password, vote, reason, prevalues):
             c.save()
             d = Vote(profile=c, vote=vote, reason=reason)
             d.save()
-            prevalues['cap_error'] = "Usuário adicionado com sucesso"
+            prevalues['cap_error'] = "Usuário e voto adicionados com sucesso"
+            user = authenticate(username=ra, password=password)
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
             return prevalues
         b = User(username=ra)
         b.save()
