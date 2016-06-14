@@ -71,7 +71,7 @@
                  {% if user.profile.vote.reason %}
                 <h4>
                 <p class="vote">
-                    {{user.profile.vote.reason}}
+                    {{ user.profile.vote.reason|linebreaks }}
                 </p></h4>
                 {% else %}
                 <h4>Você não se justificou.</h4>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label">Justificativa (Opcional):</label>
-                        <textarea class="form-control" name="reason" id="reason">{{reason_prev}}</textarea>
+                        <textarea class="form-control" name="reason" id="reason">{{ reason_prev }}</textarea>
                     </div>
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LcdQSITAAAAAAEKEs1qNRnUXifflw3SHzM3xVKB"></div>

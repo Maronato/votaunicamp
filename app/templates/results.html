@@ -76,7 +76,7 @@
             {%if not info.vote.reason%}
             <td>-</td>
             {%else%}
-            <td><button class="btn btn-success" onclick="myFunction('{{info.vote.reason}}')" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <td><button class="btn btn-success" onclick="myFunction('{{ info.vote.reason|linebreaksbr }}')" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
             <script>
                 function myFunction(n) {
                     document.getElementById("modal-text").innerHTML = n;
