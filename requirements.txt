@@ -8,3 +8,4 @@ requests==2.10.0
 git+https://github.com/euske/pdfminer.git
 unidecode==0.04.19
 beautifulsoup4==4.4.1
+bleach==1.4.3
