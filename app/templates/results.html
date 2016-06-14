@@ -6,8 +6,8 @@
 {% block content %}
 <div class="jumbotron text-center">
     <div class="container">
-        <h1>Resultados parciais!</h1>
-        <p>Sobre a pauta (Pauta atual aqui)</p>
+        <h1>Resultados parciais</h1>
+        <p>Sobre a pauta Greve dos estudantes</p>
         <a type="button" class="btn btn-lg btn-danger" href="/"><span class="glyphicon glyphicon-pencil"></span> Vote!</a>
         <a type="button" class="btn btn-lg btn-info" href="/arguments/"><span class="glyphicon glyphicon-comment"></span> Discuta!</a>
     </div>
@@ -56,11 +56,12 @@
     <table id="table" class="table table-striped order-table">
         <thead>
         <tr>
-            <th data-priority="6">Nome</th>
+            <th data-priority="1">Nome</th>
             <th data-priority="1">RA</th>
+            <th data-priority="1">RG</th>
             <th data-priority="1">Curso</th>
             <th data-priority="1">Voto</th>
-            <th data-priority="3">Justificativa</th>
+            <th data-priority="1">Justificativa</th>
 
         </tr>
         </thead>
@@ -69,6 +70,7 @@
         <tr>
             <td>{{info.first_name}}</td>
             <td>{{info.ram}}</td>
+            <td>{{info.rg}}</td>
             <td>{{info.course}}</td>
             <td>{{info.vote.vote}}</td>
             {%if not info.vote.reason%}

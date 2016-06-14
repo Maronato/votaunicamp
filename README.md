@@ -16,7 +16,7 @@ Segurança
 ---------
 O app foi testado contra os ataques web mais comuns, não foi possível invadir o sistema dessa forma.
 
-O sistema é seguro também contra ataques do tipo __brute force__, pois é necessário preencher um campo __captcha__ para cada voto
+O sistema é seguro também contra ataques do tipo __brute force__, pois é necessário preencher um campo __captcha__ para cada voto.
 
 
 ## <a name="privacy"></a> Privacidade

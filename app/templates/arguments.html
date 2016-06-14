@@ -6,8 +6,8 @@
 
 <div class="jumbotron text-center">
     <div class="container">
-        <h1>Discussão</h1>
-        <p>E a treta é uma benção</p>
+        <h1>Discussões</h1>
+        <p>Compartilhe seus argumentos</p>
         <a type="button" class="btn btn-lg btn-warning" href="/"><span class="glyphicon glyphicon-pencil"></span> Votar!</a>
         {% if user.is_authenticated %}
         <a type="button" data-toggle="modal" data-target="#commentModal" class="btn btn-lg btn-default" href="#"><span class="glyphicon glyphicon-comment"></span> Postar sua opinião!</a>
@@ -25,26 +25,25 @@
             <ul>
 
                 <li>Bem vindos à seção de discussões do site. Aqui você pode postar suas opiniões e argumentos
-                sobre os temas em pauta e votar nos comentários que você mais(ou menos) gostar. Para aproveitar mais da
+                sobre os temas em pauta e votar nos que você mais(ou menos) gostar. Para aproveitar mais da
                 seção por favor registre-se na página de votação ou faça o login ali em cima. Divirta-se!</li>
 
                 <li>Lembre-se: Seus comentários não são eternos. Você sempre pode apagar eles clicando em 'Você' ali em cima.</li>
 
                 <li>Esse é um espaço destinado a discussões elevadas e saudáveis. <b>Não</b> serão tolerados comportamentos e
-                comentários de cunho preconceituoso ou discriminante. Usuários que assim se portarem serão <b>banidos</b>.</li>
+                comentários de cunho preconceituoso ou discriminante. Usuários que assim se portarem terão os comentários apagados e seu direito de postar suspenso.</li>
 
             </ul>
         </div>
         <div class="col-md-6">
               <h3><span class="glyphicon glyphicon-link"></span> Para saber mais:</h3>
             <ul>
-                <li><a href="https://www.facebook.com/groups/GrupoUnicamp" >Grupo da Unicamp</a>: A melhor página para
-                    <strike>memes</strike> se informar sobre os ultimos babados da vida universitária.</li>
+                <li><a href="https://www.facebook.com/groups/GrupoUnicamp" >Grupo da Unicamp</a></li>
 
                 <li><a href="https://www.facebook.com/unicamplivre" >Unicamp Livre</a>: A página oficial do movimento anti-greve.</li>
 
                 <li>E é isso aí por enquanto. Não conheço mais nenhuma página oficial. Se você souber de alguma, diz aí
-                que eu vou ter o maior prazer de postar.</li>
+                que eu vou ter o maior prazer de colocar.</li>
 
             </ul>
         </div>
@@ -60,6 +59,7 @@
                 {{arg.text}}
                 <br>
                 <br>
+                <p>Por: {{arg.profile.first_name}}</p>
                 <form class="inl" action="/like_comment/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>
@@ -83,6 +83,7 @@
                 {{arg.text}}
                 <br>
                 <br>
+                <p>Por: {{arg.profile.first_name}}</p>
                 <form class="inl" action="/like_comment/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>
