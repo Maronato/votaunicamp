@@ -6,8 +6,11 @@ from .models import Args, Profile, Vote
 from . import email_functions
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
-
+import bleach
+from django.utils.html import escape
 # Create your views here.
+
+
 def index(request):
 
     return render(request, 'index.html')
@@ -84,6 +87,7 @@ def process_vote(request):
         if not recapv:
             prevalues['cap_error'] = 'Captcha incorreto'
             return render(request, 'index.html', prevalues)
+        reason = escape(bleach.clean(reason, strip=True))
         request.user.profile.vote.vote, request.user.profile.vote.reason = vote, reason
         request.user.profile.vote.save()
         prevalues['cap_error'] = 'Voto atualizado com sucesso'

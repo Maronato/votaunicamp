@@ -7,6 +7,8 @@ from .DACInfo import core
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 import re
+import bleach
+from django.utils.html import escape
 
 
 def captcha(grs):
@@ -44,6 +46,7 @@ def proc_request(request):
     password = request.POST['password']
     passwordconf = request.POST['passwordconf']
     reason = request.POST['reason']
+    reason = escape(bleach.clean(reason, strip=True))
     try:
         vote = request.POST['vote']
     except:
