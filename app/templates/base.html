@@ -256,6 +256,38 @@ p.vote {
 </script>
 {% endif %}
 
+
+        <!-- Modal -->
+<div class="modal fade" id="help-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3 class="modal-title" id="myModalLabel">Socorro!</h3>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <p>Aconteceu algo de errado? Precisa de ajuda? Fale comigo por um dos canais abaixo:</p>
+                    <li>
+                        <p><a href="http://facebook.com/gustavo.maronato">Facebook</a></p>
+                    </li>
+                    <li>
+                        <p>Telegram, <a href="https://telegram.me/GustavoMaronato">@GustavoMaronato</a></p>
+                    </li>
+                    <li>
+                        <p>Ou por email: votaunicamp@gmail.com</p>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="loginmodal-container">
@@ -327,6 +359,8 @@ p.vote {
     <hr>
     <div class="alert alert-info text-center" role="alert">
         <a href="https://github.com/Maronato/votaunicamp/blob/master/README.md#privacy">Política de Privacidade</a>
+         -
+        <a href="#" data-toggle="modal" data-target="#help-Modal"> Ajuda!</a>
     </div>
 </div>
 </body>
