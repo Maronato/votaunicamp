@@ -8,6 +8,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 import bleach
 from django.utils.html import escape
+from operator import itemgetter
 # Create your views here.
 
 
@@ -61,7 +62,7 @@ def results(request):
         'no': no,
         'abs': abs,
         'infos': Profile.objects.all(),
-        'insts': inst
+        'insts': sorted(inst, key=itemgetter(0))
     }
     return render(request, 'results.html', values)
 
