@@ -15,7 +15,7 @@ class Profile(models.Model):
     ra = models.CharField(max_length=7)
     ram = models.CharField(max_length=7)
     name = models.CharField(max_length=70)
-    rg = models.CharField(max_length=12)
+    rg = models.CharField(max_length=20)
     course = models.CharField(max_length=70)
     active = models.BooleanField(default=False)
 
