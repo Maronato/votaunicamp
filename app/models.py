@@ -48,4 +48,4 @@ class Args(models.Model):
     hits = models.ManyToManyField(Profile, related_name='click')
 
     def __str__(self):
-        return "Arg: " + str(self.title)
+        return "Arg: "
