@@ -105,7 +105,6 @@ def vote_user_create(ra, name, rg, course, password, vote, reason, prevalues, re
         except:
             pass
         #   /TEST CODE
-
         if password:
             b = User(username=ra)
             b.set_password(password)
@@ -137,7 +136,8 @@ def normalize_data(course, rg, ra, name):
         rg = rg[:-1]
     rg = rg[:3] + re.sub(r'\d', '*', rg[3:-1]) + rg[-1]
     n = re.compile(r'\d')
-    c = re.compile(r'[a-zA-Z]+ ')
-    name = c.findall(name)[0]
+    #   c = re.compile(r'[a-zA-Z]+ ')
+    #   name = c.findall(name)[0]
+    name = re.findall(r'(\w+)', name, re.UNICODE)[0]
     ra = ra[:3] + n.sub('*', ra[3:])
     return course, rg, ra, name
