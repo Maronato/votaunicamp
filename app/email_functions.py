@@ -94,6 +94,18 @@ def vote_user_create(ra, name, rg, course, password, vote, reason, prevalues, re
                 login(request, user)
         return prevalues
     except User.DoesNotExist:
+
+        #   TEST CODE
+        #   Check if user already exists with another RA, by checking BOTH rg and name. (false-positives are priority)
+        try:
+            f = Profile.objects.get(name=name)
+            f = Profile.objects.get(rg=rg)
+            prevalues['cap_error'] = "Usuário já cadastrado com outro RA."
+            return prevalues
+        except:
+            pass
+        #   /TEST CODE
+
         if password:
             b = User(username=ra)
             b.set_password(password)
