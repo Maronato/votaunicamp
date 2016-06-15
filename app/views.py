@@ -148,6 +148,8 @@ def submit_comment(request):
     else:
         side = True
     title = request.POST['title']
+    text = escape(bleach.clean(text, strip=True))
+    title = escape(bleach.clean(title, strip=True))
     a = Args(profile=author.profile, text=text, side=side, dislikes=0, likes=0, title=title)
     a.save()
     return redirect('arguments')
