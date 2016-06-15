@@ -93,6 +93,7 @@ def process_vote(request):
         request.user.profile.vote.save()
         prevalues['cap_error'] = 'Voto atualizado com sucesso'
         return render(request, 'index.html', prevalues)
+
     vnf, auth_code, vote, password, passwordconf, reason = email_functions.proc_request(request)
     prevalues = email_functions.set_prevalues(vote, reason, auth_code)
     recapv, recapt = email_functions.captcha(request.POST['g-recaptcha-response'])
