@@ -54,12 +54,7 @@ def results(request):
             except ZeroDivisionError:
                 totali = yesi = noi = absi = 0
 
-            try:
-                i = int(re.findall(r'\d+', str(institution))[0])
-            except:
-                i = 0
-
-            inst.append([institution, totali, yesi, absi, noi, i])
+            inst.append([institution, totali, yesi, absi, noi])
 
     values = {
         'total': total,
@@ -67,7 +62,7 @@ def results(request):
         'no': no,
         'abs': abs,
         'infos': Profile.objects.all(),
-        'insts': sorted(inst, key=itemgetter(5))
+        'insts': sorted(inst, key=itemgetter(0))
     }
     return render(request, 'results.html', values)
 
