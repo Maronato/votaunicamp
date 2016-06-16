@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login
 import re
 import bleach
 from django.utils.html import escape
+import unidecode
 
 
 def captcha(grs):
@@ -136,8 +137,6 @@ def normalize_data(course, rg, ra, name):
         rg = rg[:-1]
     rg = rg[:3] + re.sub(r'\d', '*', rg[3:-1]) + rg[-1]
     n = re.compile(r'\d')
-    #   c = re.compile(r'[a-zA-Z]+ ')
-    #   name = c.findall(name)[0]
-    name = re.findall(r'(\w+)', name, re.UNICODE)[0]
+    name = name.split()[0]
     ra = ra[:3] + n.sub('*', ra[3:])
     return course, rg, ra, name

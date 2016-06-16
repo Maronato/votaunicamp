@@ -114,7 +114,6 @@ def process_vote(request):
         if password != passwordconf:
             prevalues['pass_error'] = 'Senhas diferentes'
             return render(request, 'index.html', prevalues)
-
     prevalues = email_functions.vote_user_create(ra, name, rg, course, password, vote, reason, prevalues, request)
     return render(request, 'index.html', prevalues)
 
