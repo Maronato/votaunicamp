@@ -8,3 +8,4 @@ app/DACInfo/__pycache__/
 app/__pycache__/
 app/migrations/__pycache__/
 gettingstarted/__pycache__/
+stats.txt

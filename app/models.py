@@ -41,7 +41,7 @@ class Args(models.Model):
         on_delete=models.CASCADE,
     )
     side = models.BooleanField(default=False)
-    text = models.CharField(max_length=5000)
+    text = models.CharField(max_length=10000)
     dislikes = models.DecimalField(max_digits=5, decimal_places=0)
     likes = models.DecimalField(max_digits=5, decimal_places=0)
     title = models.CharField(max_length=60)
