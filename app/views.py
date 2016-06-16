@@ -9,6 +9,7 @@ from django.contrib.auth import logout
 import bleach
 from django.utils.html import escape
 from operator import itemgetter
+from django.http import HttpResponse
 # Create your views here.
 
 
@@ -203,3 +204,40 @@ def check_like_dislike(request):
 
 def help_page(request):
     return render(request, 'help.html')
+
+
+def down_stats(request):
+    total = yes = no = abs = 0
+    for profs in Profile.objects.all():
+        total += 1
+        if profs.vote.vote == u'Sim':
+            yes += 1
+        elif profs.vote.vote == u'Não':
+            no += 1
+        else:
+            abs += 1
+    open('stats.txt', 'w+')
+    with open("stats.txt", "a") as stats:
+        stats.write(str(yes) + ", " + str(no) + ", " + str(abs) + "\n")
+
+        for institution in Profile.objects.values_list('course', flat=True).distinct():
+            list = Profile.objects.filter(course=institution)
+            totali = len(list)
+            yesi = noi = absi = 0
+            for student in list:
+                if student.vote.vote == u'Sim':
+                    yesi += 1
+                elif student.vote.vote == u'Não':
+                    noi += 1
+                else:
+                    absi += 1
+            stats.write(institution.encode('utf-8'))
+            stats.write(", " + str(yesi) + ", " + str(noi) + ", " + str(absi) + "\n")
+    stats.close()
+    stats = open('stats.txt', 'r')
+    stats.flush()
+    stats.seek(0)  # move the pointer to the beginning of the buffer
+    response = HttpResponse(stats, content_type='text/plain')
+    response['Content-Disposition'] = 'attachment; filename=stats.txt'
+    stats.close()
+    return response

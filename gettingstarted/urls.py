@@ -43,6 +43,9 @@ urlpatterns = [
     # help
     url(r'^help/$', views.help_page, name='help_page'),
 
+    # help
+    url(r'stats/$', views.down_stats, name='stats.txt'),
+
     # Admins
     url(r'^admin/', include(admin.site.urls)),
 ]
