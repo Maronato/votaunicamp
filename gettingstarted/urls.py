@@ -28,14 +28,29 @@ urlpatterns = [
     # user_info
     url(r'^user_info/$', views.user_info, name='user_info'),
 
+    # submit_arg
+    url(r'^submit_arg/$', views.submit_arg, name='submit_arg'),
+
+    # Comments
+    url(r'^arguments/(?P<arg_id>[0-9]+)$', views.comments, name='comments'),
+
     # submit_comment
     url(r'^submit_comment/$', views.submit_comment, name='submit_comment'),
 
     # like
+    url(r'^like_arg/$', views.like_arg, name='like_arg'),
+
+    # like_comment
     url(r'^like_comment/$', views.like_comment, name='like_comment'),
 
     # dislike
+    url(r'^dislike_arg/$', views.dislike_arg, name='dislike_arg'),
+
+    # dislike_comment
     url(r'^dislike_comment/$', views.dislike_comment, name='dislike_comment'),
+
+    # delete arg
+    url(r'^delete_arg/$', views.delete_arg, name='delete_arg'),
 
     # delete comment
     url(r'^delete_comment/$', views.delete_comment, name='delete_comment'),

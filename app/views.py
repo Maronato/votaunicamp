@@ -2,7 +2,7 @@
 # coding: utf-8
 from django.shortcuts import render, redirect
 import re
-from .models import Args, Profile, Vote
+from .models import Args, Profile, Comment
 from . import email_functions
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
@@ -137,10 +137,10 @@ def logout_user(request):
 
 
 def user_info(request):
-    return render(request, 'userinfo.html',{'args': Args.objects.filter(profile=request.user.profile)})
+    return render(request, 'userinfo.html',{'args': Args.objects.filter(profile=request.user.profile), 'comments': Comment.objects.filter(author=request.user.profile)})
 
 
-def submit_comment(request):
+def submit_arg(request):
     author = request.user
     text = request.POST['text']
     if request.POST['vote'] == 'Sim':
@@ -155,12 +155,12 @@ def submit_comment(request):
     return redirect('arguments')
 
 
-def like_comment(request):
+def like_arg(request):
     if not request.user.is_authenticated():
         return redirect('arguments')
     button = request.POST['press']
     a = Args.objects.get(id=button)
-    if not check_like_dislike(request):
+    if not check_like_dislike_arg(request):
         return redirect('/arguments/#' + str(a.id))
     a.likes += 1
     a.hits.add(request.user.profile)
@@ -168,12 +168,12 @@ def like_comment(request):
     return redirect('/arguments/#' + str(a.id))
 
 
-def dislike_comment(request):
+def dislike_arg(request):
     if not request.user.is_authenticated():
         return redirect('arguments')
     button = request.POST['press']
     a = Args.objects.get(id=button)
-    if not check_like_dislike(request):
+    if not check_like_dislike_arg(request):
         return redirect('/arguments/#' + str(a.id))
     a.dislikes += 1
     a.hits.add(request.user.profile)
@@ -181,7 +181,7 @@ def dislike_comment(request):
     return redirect('/arguments/#' + str(a.id))
 
 
-def delete_comment(request):
+def delete_arg(request):
     if not request.user.is_authenticated():
         return redirect('index')
     button = request.POST['press']
@@ -192,7 +192,7 @@ def delete_comment(request):
     return redirect('/user_info/')
 
 
-def check_like_dislike(request):
+def check_like_dislike_arg(request):
     button = request.POST['press']
     a = Args.objects.get(id=button)
     user = request.user.profile
@@ -241,3 +241,71 @@ def down_stats(request):
     response['Content-Disposition'] = 'attachment; filename=stats.txt'
     stats.close()
     return response
+
+
+def comments(request, arg_id):
+    arg_id = int(arg_id)
+    arg = Args.objects.get(id=arg_id)
+    comment = Comment.objects.filter(argument=arg)
+    return render(request, 'comments.html', {'comments': comment, 'arg': arg})
+
+
+def submit_comment(request):
+    author = request.user.profile
+    text = request.POST['text']
+    arg = request.POST['arg']
+    arg = Args.objects.get(id=arg)
+    text = escape(bleach.clean(text, strip=True))
+    a = Comment(argument=arg, text=text, dislikes=0, likes=0, author=author)
+    a.save()
+    return redirect('/arguments/' + str(arg.id) + "#" + str(a.id))
+
+
+def like_comment(request):
+    button = request.POST['press']
+    a = Comment.objects.get(id=button)
+    arg = a.argument
+    if not request.user.is_authenticated():
+        return redirect('/arguments/' + str(arg.id) + "#" + str(a.id))
+    if not check_like_dislike_comment(request):
+        return redirect('/arguments/' + str(arg.id) + "#" + str(a.id))
+    a.likes += 1
+    a.hits.add(request.user.profile)
+    a.save()
+    return redirect('/arguments/' + str(arg.id) + "#" + str(a.id))
+
+
+def dislike_comment(request):
+    button = request.POST['press']
+    a = Comment.objects.get(id=button)
+    arg = a.argument
+    if not request.user.is_authenticated():
+        return redirect('/arguments/' + str(arg.id) + "#" + str(a.id))
+    if not check_like_dislike_comment(request):
+        return redirect('/arguments/' + str(arg.id) + "#" + str(a.id))
+    a.dislikes += 1
+    a.hits.add(request.user.profile)
+    a.save()
+
+    return redirect('/arguments/' + str(arg.id) + "#" + str(a.id))
+
+
+def delete_comment(request):
+    if not request.user.is_authenticated():
+        return redirect('index')
+    button = request.POST['press']
+    a = Comment.objects.get(id=button)
+    if not a.author == request.user.profile:
+        return redirect('index')
+    a.delete()
+    return redirect('/user_info/')
+
+
+def check_like_dislike_comment(request):
+    button = request.POST['press']
+    a = Comment.objects.get(id=button)
+    user = request.user.profile
+    for hit in a.hits.all():
+        if hit.ra == user.ra:
+            return 0
+    return 1

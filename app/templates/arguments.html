@@ -5,6 +5,7 @@
 
 
 <div class="jumbotron text-center">
+    <script type="text/javascript" src="/static/jquery.shorten.js"></script>
     <div class="container">
         <h1>Discussões</h1>
         <p>Compartilhe seus argumentos</p>
@@ -57,18 +58,20 @@
             {% if arg.side %}
             <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
             <ul>
-                {{arg.text}}
-                <br>
+                <div class="comment">
+                    {{arg.text}}
+                </div>
                 <br>
                 <p>Por: {{arg.profile.first_name}}</p>
-                <form class="inl" action="/like_comment/" method="POST" id="{{arg.id}}">
+                <form class="inl" action="/like_arg/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>
                 </form>
-                <form class="inl" action="/dislike_comment/" method="POST" id="{{arg.id}}">
+                <form class="inl" action="/dislike_arg/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span> {{arg.dislikes}}</button>
                 </form>
+                <a type="button" class="btn btn-sm btn-info" href="/arguments/{{arg.id}}">Comentários!</a>
             <hr>
             </ul>
             {% endif %}
@@ -81,18 +84,20 @@
             {% if not arg.side %}
             <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
             <ul>
-                {{arg.text}}
-                <br>
+                <div class="comment">
+                    {{arg.text}}
+                </div>
                 <br>
                 <p>Por: {{arg.profile.first_name}}</p>
-                <form class="inl" action="/like_comment/" method="POST" id="{{arg.id}}">
+                <form class="inl" action="/like_arg/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>
                 </form>
-                <form class="inl" action="/dislike_comment/" method="POST" id="{{arg.id}}">
+                <form class="inl" action="/dislike_arg/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span> {{arg.dislikes}}</button>
                 </form>
+                <a type="button" class="btn btn-sm btn-info" href="/arguments/{{arg.id}}">Comentários!</a>
             <hr>
             </ul>
             {% endif %}
@@ -141,7 +146,7 @@
 				<h2 id="modal-head" class="modal-title">Compartilhe suas opiniões!</h2>
 			</div>
 			<div class="modal-body">
-                <form action="/submit_comment/" method="post">
+                <form action="/submit_arg/" method="post">
                     {% csrf_token %}
                     <div class="form-group">
                         <label class="control-label"><h4>Esse texto será a favor ou contra a pauta autal?</h4> </label>

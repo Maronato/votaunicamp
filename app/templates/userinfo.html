@@ -60,7 +60,7 @@
     </div>
     <hr>
     <div class="row">
-        {% if not args %}
+        {% if not args and not comments %}
         <h3><span class="glyphicon glyphicon-repeat"></span> Você ainda não postou nenhuma opinião na discussão</h3>
         {% else %}
         <h3><span class="glyphicon glyphicon-repeat"></span> E essas são as opiniões que você já postou:</h3>
@@ -69,22 +69,40 @@
 
 
     <div class="row">
-        {% for arg in args %}
-        <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
-        <ul>
-            {{arg.text}}
-            <br>
-            <br>
-            <form class="inl" action="/delete_comment/" method="POST" id="{{arg.id}}">
-                {% csrf_token %}
-                <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-trash"></span></button>
-            </form>
-            <hr>
-        </ul>
-        {% endfor %}
-        {% endif %}
+        <div class="col-md-6">
+            {% for arg in args %}
+            <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
+            <ul>
+                {{arg.text}}
+                <br>
+                <br>
+                <form class="inl" action="/delete_arg/" method="POST" id="{{arg.id}}">
+                    {% csrf_token %}
+                    <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-trash"></span></button>
+                </form>
+                <hr>
+            </ul>
+            {% endfor %}
 
+        </div>
 
+        <div class="col-md-6">
+            {% for arg in comments %}
+            <h3><span class="glyphicon glyphicon-comment"></span> Em: <a href="/arguments/{{arg.argument.id}}#{{arg.id}}" >{{ arg.argument.title }}</a></h3>
+            <ul>
+                {{arg.text}}
+                <br>
+                <br>
+                <form class="inl" action="/delete_comment/" method="POST" id="{{arg.id}}">
+                    {% csrf_token %}
+                    <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-trash"></span></button>
+                </form>
+                <hr>
+            </ul>
+            {% endfor %}
+            {% endif %}
+
+        </div>
     </div>
 
 

@@ -41,7 +41,7 @@ class Args(models.Model):
         on_delete=models.CASCADE,
     )
     side = models.BooleanField(default=False)
-    text = models.CharField(max_length=10000)
+    text = models.CharField(max_length=10001)
     dislikes = models.DecimalField(max_digits=5, decimal_places=0)
     likes = models.DecimalField(max_digits=5, decimal_places=0)
     title = models.CharField(max_length=60)
@@ -49,3 +49,21 @@ class Args(models.Model):
 
     def __str__(self):
         return "Arg: "
+
+
+class Comment(models.Model):
+    argument = models.ForeignKey(
+        Args,
+        on_delete=models.CASCADE,
+    )
+    author = models.ForeignKey(
+        Profile,
+        on_delete=models.CASCADE,
+    )
+    text = models.CharField(max_length=10001)
+    dislikes = models.DecimalField(max_digits=5, decimal_places=0)
+    likes = models.DecimalField(max_digits=5, decimal_places=0)
+    hits = models.ManyToManyField(Profile, related_name='clicks')
+
+    def __str__(self):
+        return "Comment: " + str(self.id)

@@ -4,15 +4,18 @@
 {% block content %}
 
 
+
 <div class="jumbotron text-center">
     <div class="container">
-        <h1>Discussões</h1>
-        <p>Compartilhe seus argumentos</p>
-        <a type="button" class="btn btn-lg btn-warning" href="/"><span class="glyphicon glyphicon-pencil"></span> Votar!</a>
+        <script type="text/javascript" src="/static/jquery.shorten.js"></script>
+        <h1>{{ arg.title }}</h1>
+        <p>Vamos falar sobre isso!</p>
+        <a type="button" class="btn btn-lg btn-danger" href="/"><span class="glyphicon glyphicon-pencil"></span> Votar!</a>
+        <a type="button" class="btn btn-lg btn-info" href="/arguments/"><span class="glyphicon glyphicon-th-list"></span> Ver argumentos!</a>
         {% if user.is_authenticated %}
-        <a type="button" data-toggle="modal" data-target="#commentModal" class="btn btn-lg btn-default" href="#"><span class="glyphicon glyphicon-comment"></span> Postar sua opinião!</a>
+        <a type="button" data-toggle="modal" data-target="#commentModal" class="btn btn-lg btn-success" href="#"><span class="glyphicon glyphicon-comment"></span> Comentar!</a>
         {% else %}
-        <a type="button" data-toggle="modal" data-target="#login-modal" class="btn btn-lg btn-default" href="#"><span class="glyphicon glyphicon-comment"></span> Postar sua opinião!</a>
+        <a type="button" data-toggle="modal" data-target="#login-modal" class="btn btn-lg btn-success" href="#"><span class="glyphicon glyphicon-comment"></span> Comentar!</a>
         {% endif %}
         <a type="button" class="btn btn-lg btn-primary" href="/results/"><span class="glyphicon glyphicon-th-list"></span> Ver Resultados!</a>
     </div>
@@ -24,9 +27,7 @@
             <h3><span class="glyphicon glyphicon-info-sign"></span> Atenção!</h3>
             <ul>
 
-                <p><li>Bem vindos à seção de discussões do site. Aqui você pode postar suas opiniões e argumentos
-                sobre os temas em pauta e votar nos que você mais(ou menos) gostar. Para aproveitar mais da
-                seção por favor registre-se na página de votação ou faça o login ali em cima. Divirta-se!</li></p>
+                <p><li>Para comentar é necessário uma conta. Faça uma na página de votos ou faça o login.</li></p>
 
                 <p><li>Lembre-se: Seus comentários não são eternos. Você sempre pode apagar eles clicando em 'Você' ali em cima.</li></p>
 
@@ -35,100 +36,46 @@
 
             </ul>
         </div>
-        <div class="col-md-6">
-              <h3><span class="glyphicon glyphicon-link"></span> Para saber mais:</h3>
-            <ul>
-                <li><a href="https://www.facebook.com/groups/GrupoUnicamp" >Grupo da Unicamp</a></li>
-
-                <li><a href="https://www.facebook.com/unicamplivre" >Unicamp Livre</a></li>
-
-                <li><a href="https://www.facebook.com/OcupaTudoUnicamp/" >Ocupa Tudo Unicamp</a></li>
-
-                <li><a href="https://www.facebook.com/Unicamp-EM-GREVE-2016-564222327095782/" >Unicamp EM GREVE 2016</a></li>
-
-            </ul>
-        </div>
     </div>
     <hr>
     <div class="row">
         <div class="col-md-6">
 
-            {% for arg in args %}
-            {% if arg.side %}
             <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
             <ul>
-                {{arg.text}}
-                <br>
+                <div class="comment">
+                    {{arg.text}}
+                </div>
                 <br>
                 <p>Por: {{arg.profile.first_name}}</p>
-                <form class="inl" action="/like_arg/" method="POST" id="{{arg.id}}">
-                    {% csrf_token %}
-                    <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>
-                </form>
-                <form class="inl" action="/dislike_arg/" method="POST" id="{{arg.id}}">
-                    {% csrf_token %}
-                    <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span> {{arg.dislikes}}</button>
-                </form>
-            <hr>
+
             </ul>
-            {% endif %}
-            {% endfor %}
 
         </div>
         <div class="col-md-6">
 
-            {% for arg in args %}
-            {% if not arg.side %}
-            <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
+            {% for comment in comments %}
             <ul>
-                {{arg.text}}
+                <div class="comment">
+                    {{comment.text}}
+                </div>
                 <br>
-                <br>
-                <p>Por: {{arg.profile.first_name}}</p>
-                <form class="inl" action="/like_arg/" method="POST" id="{{arg.id}}">
+                <p>Por: {{comment.author.first_name}}</p>
+                <form class="inl" action="/like_comment/" method="POST" id="{{comment.id}}">
                     {% csrf_token %}
-                    <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>
+                    <button type="submit" name="press" value="{{comment.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{comment.likes}}</button>
                 </form>
-                <form class="inl" action="/dislike_arg/" method="POST" id="{{arg.id}}">
+                <form class="inl" action="/dislike_comment/" method="POST" id="{{comment.id}}">
                     {% csrf_token %}
-                    <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span> {{arg.dislikes}}</button>
+                    <button type="submit" name="press" value="{{comment.id}}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove"></span> {{comment.dislikes}}</button>
                 </form>
             <hr>
             </ul>
-            {% endif %}
             {% endfor %}
 
         </div>
     </div>
 
-
-
-<!--<script type="text/javascript">
-    $(window).load(function(){
-        $('#myModal').modal('show');
-    });
-</script>
-        <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<h2 id="modal-head" class="modal-title">Pode parar!</h2>
-			</div>
-			<div class="modal-body">
-				Essa página ainda não está pronta. Pretendo fazer muita coisa com ela, e isso deve demorar um pouco.
-                Você pode dar uma olhada enquanto isso, mas não se desespere se todos os botões estiverem errados e você
-                ficar preso aqui pra sempre! Muahahaha
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-			</div>
-		</div>
-
-	</div>
-</div>
 
 
             <!-- Modal -->
@@ -138,29 +85,18 @@
 		<!-- Modal content-->
 		<div class="modal-content2">
 			<div class="modal-header">
-				<h2 id="modal-head" class="modal-title">Compartilhe suas opiniões!</h2>
+				<h2 id="modal-head" class="modal-title">Comente!</h2>
 			</div>
 			<div class="modal-body">
-                <form action="/submit_arg/" method="post">
+                <form action="/submit_comment/" method="post">
                     {% csrf_token %}
                     <div class="form-group">
-                        <label class="control-label"><h4>Esse texto será a favor ou contra a pauta autal?</h4> </label>
-                        </br>
-                        <input type="radio" id="vote_0" value="Sim" checked="checked" name="vote" />
-                        <label for="vote_0">
-                         A favor!
-                        <input type="radio" id="vote_1" value="Não" name="vote" />
-                        <label for="vote_1">
-                            Contra!
-                        </label>
+                        {% csrf_token %}
+                        <textarea class="form-control" name="text" rows="3" required placeholder="(Eu acho que...)" id="text"></textarea>
                     </div>
                     <div class="form-group">
                         {% csrf_token %}
-                        <input type="text" name="title" required placeholder="Título" id="text">
-                    </div>
-                    <div class="form-group">
-                        {% csrf_token %}
-                        <textarea class="form-control" name="text" rows="3" required placeholder="(Sua opinião vai aqui)" id="text"></textarea>
+                        <input type="hidden" name="arg" value="{{ arg.id }}">
                     </div>
                     <div class="form-group">
                         {% csrf_token %}
@@ -178,5 +114,16 @@
 
 	</div>
 </div>
+
+
+    <div class="fixed">
+{% if user.is_authenticated %}
+        <a type="button" data-toggle="modal" data-target="#commentModal" class="btn btn-lg btn-success" href="#"><span class="glyphicon glyphicon-comment"></span> Comentar!</a>
+        {% else %}
+        <a type="button" data-toggle="modal" data-target="#login-modal" class="btn btn-lg btn-success" href="#"><span class="glyphicon glyphicon-comment"></span> Comentar!</a>
+        {% endif %}
+</div>
+
+
 
 {% endblock %}
