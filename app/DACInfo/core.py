@@ -24,11 +24,8 @@ def check_code(key_code):
 def check_fields(text):
     fields = {
         'nome': get_field('Nome', text),
-        'rg': get_field('Documento de Identidade', text),
         'curso': get_field('Dados do Ingresso', text),
-        'situacao': get_field('Situação no Curso', text),
         'ra': get_field('Registro Acadêmico', text),
-        'nivel': get_field('Nível', text),
     }
     return fields
 

@@ -13,11 +13,9 @@ class Profile(models.Model):
     )
     first_name = models.CharField(max_length=20)
     ra = models.CharField(max_length=7)
-    ram = models.CharField(max_length=7)
     name = models.CharField(max_length=70)
-    rg = models.CharField(max_length=25)
     course = models.CharField(max_length=70)
-    active = models.BooleanField(default=False)
+    nickname = models.CharField(max_length=30, null=True)
 
     def __str__(self):
         return "Profile: " + str(self.ra)
@@ -32,7 +30,7 @@ class Vote(models.Model):
     reason = models.TextField()
 
     def __str__(self):
-        return "Vote from: " + str(self.profile)
+        return "Vote from: " + str(self.profile.nickname)
 
 
 class Args(models.Model):
@@ -48,7 +46,7 @@ class Args(models.Model):
     hits = models.ManyToManyField(Profile, related_name='click')
 
     def __str__(self):
-        return "Arg: "
+        return "Arg: " + str(self.profile.nickname)
 
 
 class Comment(models.Model):
@@ -66,4 +64,4 @@ class Comment(models.Model):
     hits = models.ManyToManyField(Profile, related_name='clicks')
 
     def __str__(self):
-        return "Comment: " + str(self.id)
+        return "Comment: " + str(self.id) + " " + str(self.author.nickname)

@@ -9,6 +9,7 @@ from django.contrib.auth import authenticate, login
 import re
 import bleach
 from django.utils.html import escape
+import random
 import unidecode
 
 
@@ -71,72 +72,60 @@ def set_prevalues(vote, reason, auth_code):
     return prevalues
 
 
-def vote_user_create(ra, name, rg, course, password, vote, reason, prevalues, request):
-    course, rg, ram, first_name = normalize_data(course, rg, ra, name)
+def gen_random_nickname():
+    import random
+    parts = {}
+    path = os.path.dirname(os.path.dirname(__file__)) + '/app/names'
+    with open(path, 'r') as f:
+        lis = []
+        for line in f.readlines():
+            line = line.strip()
+            if line.startswith('[') and line.endswith(']'):
+                lis = []
+                parts[line[1:-1]] = lis
+            else:
+                lis.append(line.strip())
+
+    nick = random.choice(parts['part1']) + " " + random.choice(parts['part2'])
+    for user in Profile.objects.all():
+        if user.nickname == nick:
+            nick = gen_random_nickname()
+            return nick
+    return nick
+
+
+def vote_user_create(ra, name, course, password, vote, reason, prevalues, request):
+    course, first_name = normalize_data(course, name)
     try:
         #   Check if user exists
         a = User.objects.get(username=ra)
-        if a.profile.active is True:
-            prevalues['cap_error'] = 'Faça o login para alterar seu voto'
+        prevalues['cap_error'] = 'Faça o login para alterar seu voto'
+        return prevalues
+
+    except User.DoesNotExist:
+        try:
+            f = Profile.objects.get(name=name)
+            prevalues['cap_error'] = "Usuário já cadastrado com outro RA."
             return prevalues
-        if password:
-            a.profile.active = True
-            a.set_password(password)
-            prevalues['cap_error'] = "Usuário e voto adicionado com sucesso"
-        else:
-            prevalues['cap_error'] = "Voto atualizado com sucesso"
-        a.profile.vote.vote, a.profile.vote.reason = vote, reason
-        a.profile.vote.save()
-        a.profile.save()
-        a.save()
+        except:
+            pass
+        b = User(username=ra)
+        b.set_password(password)
+        b.save()
+        nick = gen_random_nickname()
+        c = Profile(user=b, ra=ra, name=name, course=course, first_name=first_name, nickname=nick)
+        c.save()
+        d = Vote(profile=c, vote=vote, reason=reason)
+        d.save()
+        prevalues['cap_error'] = "Usuário e voto adicionados com sucesso"
         user = authenticate(username=ra, password=password)
         if user is not None:
             if user.is_active:
                 login(request, user)
         return prevalues
-    except User.DoesNotExist:
-
-        #   TEST CODE
-        #   Check if user already exists with another RA, by checking BOTH rg and name. (false-positives are priority)
-        try:
-            f = Profile.objects.get(name=name)
-            f = Profile.objects.get(rg=rg)
-            prevalues['cap_error'] = "Usuário já cadastrado com outro RA."
-            return prevalues
-        except:
-            pass
-        #   /TEST CODE
-        if password:
-            b = User(username=ra)
-            b.set_password(password)
-            b.save()
-            c = Profile(user=b, ra=ra, name=name, rg=rg, course=course, active=True, first_name=first_name, ram=ram)
-            c.save()
-            d = Vote(profile=c, vote=vote, reason=reason)
-            d.save()
-            prevalues['cap_error'] = "Usuário e voto adicionados com sucesso"
-            user = authenticate(username=ra, password=password)
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-            return prevalues
-        b = User(username=ra)
-        b.save()
-        c = Profile(user=b, ra=ra, name=name, rg=rg, course=course, active=False, first_name=first_name, ram=ram)
-        c.save()
-        d = Vote(profile=c, vote=vote, reason=reason)
-        d.save()
-        prevalues['cap_error'] = "Voto adicionado com sucesso"
-        return prevalues
 
 
-def normalize_data(course, rg, ra, name):
+def normalize_data(course, name):
     course = re.sub('Curso: ', '', course)
-    rg = re.sub('[a-zA-Z]| ', '', rg)
-    if len(re.findall('-', rg)) > 1:
-        rg = rg[:-1]
-    rg = rg[:3] + re.sub(r'\d', '*', rg[3:-1]) + rg[-1]
-    n = re.compile(r'\d')
     name = name.split()[0]
-    ra = ra[:3] + n.sub('*', ra[3:])
-    return course, rg, ra, name
+    return course, name

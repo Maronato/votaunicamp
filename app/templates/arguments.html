@@ -62,7 +62,7 @@
                     {{arg.text}}
                 </div>
                 <br>
-                <p>Por: {{arg.profile.first_name}}</p>
+                <p>Por {{arg.profile.nickname}}</p>
                 <form class="inl" action="/like_arg/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>
@@ -88,7 +88,7 @@
                     {{arg.text}}
                 </div>
                 <br>
-                <p>Por: {{arg.profile.first_name}}</p>
+                <p>Por {{arg.profile.nickname}}</p>
                 <form class="inl" action="/like_arg/" method="POST" id="{{arg.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{arg.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{arg.likes}}</button>

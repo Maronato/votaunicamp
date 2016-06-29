@@ -10,6 +10,9 @@ urlpatterns = [
     # /results/
     url(r'^results/$', views.results, name='results'),
 
+    # /prev_results/
+    url(r'^prev_results/$', views.prev_results, name='prev_results'),
+
     # /arguments/
     url(r'^arguments/$', views.arguments, name='arguments'),
 
@@ -60,6 +63,21 @@ urlpatterns = [
 
     # help
     url(r'stats/$', views.down_stats, name='stats.txt'),
+
+    # send mail
+    url(r'email/$', views.send_email_all, name='send_mail'),
+
+    # change name
+    url(r'change_name/$', views.change_name, name='change_name'),
+
+    # delete account
+    url(r'delete_account/$', views.delete_account, name='delete_account'),
+
+    # test
+    url(r'test/$', views.test, name='test'),
+
+    # update
+    url(r'update/$', views.update, name='update'),
 
     # Admins
     url(r'^admin/', include(admin.site.urls)),

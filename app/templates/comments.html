@@ -47,20 +47,26 @@
                     {{arg.text}}
                 </div>
                 <br>
-                <p>Por: {{arg.profile.first_name}}</p>
+                <p>Por {{arg.profile.nickname}}</p>
 
             </ul>
 
         </div>
         <div class="col-md-6">
-
+            {% if not comments %}
+            <p><h2>Vamos tornar isso um diálogo! {% if user.is_authenticated %}
+        <a type="button" data-toggle="modal" data-target="#commentModal" class="btn btn-lg btn-success" href="#"> Comente!</a>
+        {% else %}
+        <a type="button" data-toggle="modal" data-target="#login-modal" class="btn btn-lg btn-success" href="#"> Comente!</a>
+        {% endif %}</h2></p>
+            {% else %}
             {% for comment in comments %}
             <ul>
                 <div class="comment">
                     {{comment.text}}
                 </div>
                 <br>
-                <p>Por: {{comment.author.first_name}}</p>
+                <p>Por {{comment.author.nickname}}</p>
                 <form class="inl" action="/like_comment/" method="POST" id="{{comment.id}}">
                     {% csrf_token %}
                     <button type="submit" name="press" value="{{comment.id}}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> {{comment.likes}}</button>
@@ -72,6 +78,7 @@
             <hr>
             </ul>
             {% endfor %}
+            {% endif %}
 
         </div>
     </div>
@@ -116,6 +123,7 @@
 </div>
 
 
+    {% if comments %}
     <div class="fixed">
 {% if user.is_authenticated %}
         <a type="button" data-toggle="modal" data-target="#commentModal" class="btn btn-lg btn-success" href="#"><span class="glyphicon glyphicon-comment"></span> Comentar!</a>
@@ -123,7 +131,7 @@
         <a type="button" data-toggle="modal" data-target="#login-modal" class="btn btn-lg btn-success" href="#"><span class="glyphicon glyphicon-comment"></span> Comentar!</a>
         {% endif %}
 </div>
-
+    {% endif %}
 
 
 {% endblock %}

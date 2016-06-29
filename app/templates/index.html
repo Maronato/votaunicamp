@@ -38,7 +38,8 @@
         <div class="col-md-6">
             <h3><span class="glyphicon glyphicon-comment"></span>   Pautas Atuais</h3>
             <ul>
-                <li>Você é a favor da manutenção da greve?</li>
+                <li>Piquetes</li>
+                <li>Ocupações</li>
             </ul>
         </div>
     </div> <!-- row -->
@@ -54,13 +55,12 @@
                     <a href="/help/"> O que é isso?</a>
                     <br>
                     <input type="text" name="auth_code" id="auth_code" value="{{auth_prev}}">
-                    <h4 style="display:inline;"><span  class="label label-info">{{auth_error}}</span></h4>
+                    <h4 style="display:inline;"><span  class="label label-danger">{{auth_error}}</span></h4>
                     <br>
-                    <label class="control-label">Senha (Opcional)</label>
-                    <a href="#" data-toggle="modal" data-target="#pass-Modal"> Pra quê?</a>
+                    <label class="control-label">Senha (Obrigatório)</label>
                     <br>
                     <input name="password" id="password" type="password">
-                    <h4 style="display:inline;"><span  class="label label-info">{{pass_error}}</span></h4>
+                    <h4 style="display:inline;"><span  class="label label-danger">{{pass_error}}</span></h4>
                     <br>
                     <label class="control-label">Confirme a senha</label>
                     <br>
@@ -68,8 +68,10 @@
                 </div>
                 {% else %}
                 <h3><span class="glyphicon glyphicon-repeat"></span>  Seu último voto:</h3>
-                </br>
-                <h2>{{user.profile.vote.vote}}</h2>
+                <h5><p>Seu nome fictício é {{user.profile.nickname}}, mas pode ser alterado clicando em <a href="/user_info/"><span class="glyphicon glyphicon-user"></span>Você</a>
+                ali em cima!</p></h5>
+                {% if user.profile.vote.vote %}
+                <h1>{{user.profile.vote.vote}}</h1>
                  {% if user.profile.vote.reason %}
                 <h4>
                 <p class="vote">
@@ -77,6 +79,9 @@
                 </p></h4>
                 {% else %}
                 <h4>Você não se justificou.</h4>
+                {% endif %}
+                {% else %}
+                <h3>Você ainda não votou na pauta atual</h3>
                 {% endif %}
                 {% endif %}
 
@@ -109,39 +114,12 @@
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-success">Enviar</button>
-                        <h4 style="display:inline;"><span  class="label label-info">{{cap_error}}</span></h4>
+                        <h4 style="display:inline;"><span  class="label label-danger">{{cap_error}}</span></h4>
                     </div>
             </form>
         </div>
     </div>
 </div>
-        <!-- Modal -->
-<div class="modal fade" id="pass-Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3 class="modal-title" id="myModalLabel">Senha? Por quê?</h3>
-            </div>
-            <div class="modal-body">
-                Você não precisa de uma senha. Pode votar normalmente sem ela.
-                <br>
-                Mas só vai poder fazer isso.
-                <br>
-                Para curtir e postar opiniões, além de verificar e alterar seu último voto sem ter que pegar o código de
-                autenticação toda vez, é necessário que você se registre com uma senha. A partir daí, seu login se torna
-                o seu RA e você pode usar o site inteiro, da forma que quiser.
-                <br>
-                <br>
-                <b>Atenção:</b>Se você não quiser criar uma senha agora não tem problema! Você pode criar uma na próxima
-                vez que votar. Basta preencher novamente todos os campos e votar.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 
 

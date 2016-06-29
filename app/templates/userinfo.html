@@ -35,14 +35,21 @@
 
                 <li>Seu RA: {{user.profile.ra}}</li>
 
-                <li>Seu RG: {{user.profile.rg}} (Salvo dessa forma)</li>
-
                 <li>Seu curso: {{user.profile.course}}</li>
+
+            </ul>
+            <hr>
+            <h3><span class="glyphicon glyphicon-user"></span> Seu nome fictício é {{user.profile.nickname}}</h3>
+            <ul>
+                <p>Não curtiu? Podemos alterar ele por você.</p>
+                <p><a type="button" class="btn btn-md btn-primary" href="/change_name/">Quero outro!</a></p>
+
+
 
             </ul>
         </div>
         <div class="col-md-6">
-              <h3><span class="glyphicon glyphicon-remove"></span> Não curti</h3>
+              <h3><span class="glyphicon glyphicon-flag"></span> Não curti</h3>
             <ul>
                 Se não aprova que alguma dessas informações esteja aqui, me contate por um dos meios a seguir:
                 <li>
@@ -56,22 +63,40 @@
                 </li>
 
             </ul>
+            <hr>
+            <h3><span class="glyphicon glyphicon-remove"></span> Apagar conta</h3>
+            <ul>
+                Não quer mais fazer parte do site?<br>
+                Apagar sua conta inclui:
+                <li>
+                    Seu voto
+                </li>
+                <li>
+                    Seus argumentos
+                </li>
+                <li>
+                    Seus comentários
+                </li>
+                <br>
+                <p><a type="button" data-toggle="modal" data-target="#deleteaccountModal" class="btn btn-md btn-danger" href="#">Apagar tudo!</a></p>
+            </ul>
         </div>
     </div>
     <hr>
     <div class="row">
         {% if not args and not comments %}
-        <h3><span class="glyphicon glyphicon-repeat"></span> Você ainda não postou nenhuma opinião na discussão</h3>
+        <h3><span class="glyphicon glyphicon-leaf"></span> Você ainda não postou nada</h3>
         {% else %}
-        <h3><span class="glyphicon glyphicon-repeat"></span> E essas são as opiniões que você já postou:</h3>
+        <h3><span class="glyphicon glyphicon-leaf"></span> E essas são as coisas que você já postou:</h3>
 
     </div>
 
 
     <div class="row">
         <div class="col-md-6">
+            <h3>Seus argumentos:</h3>
             {% for arg in args %}
-            <h3><span class="glyphicon glyphicon-flash"></span>   {{arg.title}}</h3>
+            <h3><span class="glyphicon glyphicon-flash"></span><a href="/arguments/{{arg.id}}" >{{ arg.title }}</a></h3>
             <ul>
                 {{arg.text}}
                 <br>
@@ -87,8 +112,9 @@
         </div>
 
         <div class="col-md-6">
+            <h3>Seus comentários:</h3>
             {% for arg in comments %}
-            <h3><span class="glyphicon glyphicon-comment"></span> Em: <a href="/arguments/{{arg.argument.id}}#{{arg.id}}" >{{ arg.argument.title }}</a></h3>
+            <h3><span class="glyphicon glyphicon-comment"></span> Em <a href="/arguments/{{arg.argument.id}}#{{arg.id}}" >{{ arg.argument.title }}</a></h3>
             <ul>
                 {{arg.text}}
                 <br>
@@ -113,21 +139,22 @@
     });
 </script>
         <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="deleteaccountModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 
 		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 id="modal-head" class="modal-title">Pode parar!</h2>
+				<h2 id="modal-head" class="modal-title">Fica, vai ter bolo!</h2>
 			</div>
 			<div class="modal-body">
-				Essa página ainda não está pronta. Pretendo fazer muita coisa com ela, e isso deve demorar um pouco.
-                Você pode dar uma olhada enquanto isso, mas não se desespere se todos os botões estiverem errados e você
-                ficar preso aqui pra sempre! Muahahaha
+				Essa ação é permanente. Todos os seus dados serão apagados!<br>
+                Você pode criar uma conta depois usando um código de autenticação.<br>
+                Tem certeza de que quer fazer isso? :(
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                <a type="button" class="btn btn-md btn-danger" href="/delete_account/">Já chega desse site!</a>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Não apagar!</button>
 			</div>
 		</div>
 

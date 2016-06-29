@@ -7,9 +7,12 @@
 <div class="jumbotron text-center">
     <div class="container">
         <h1>Resultados parciais</h1>
-        <p>Sobre a pauta "Você é a favor da manutenção da greve?"</p>
+        <p>Sobre a pauta Piquetes e Ocupações</p>
         <a type="button" class="btn btn-lg btn-danger" href="/"><span class="glyphicon glyphicon-pencil"></span> Vote!</a>
         <a type="button" class="btn btn-lg btn-info" href="/arguments/"><span class="glyphicon glyphicon-comment"></span> Discuta!</a>
+        <br>
+        <br>
+        <a type="button" class="btn btn-lg btn-warning" href="/prev_results/"><span class="glyphicon glyphicon-comment"></span> Resultados da Pauta anterior!</a>
     </div>
 </div>
 <div class=container>
@@ -56,9 +59,7 @@
     <table id="table" class="table table-striped order-table">
         <thead>
         <tr>
-            <th data-priority="1">Nome</th>
-            <th data-priority="1">RA</th>
-            <th data-priority="1">RG</th>
+            <th data-priority="1">Nome Fictício Único</th>
             <th data-priority="1">Curso</th>
             <th data-priority="1">Voto</th>
             <th data-priority="1">Justificativa</th>
@@ -68,15 +69,13 @@
         <tbody>
         {% for info in infos %}
         <tr>
-            <td>{{info.first_name}}</td>
-            <td>{{info.ram}}</td>
-            <td>{{info.rg}}</td>
-            <td>{{info.course}}</td>
-            <td>{{info.vote.vote}}</td>
-            {%if not info.vote.reason%}
+            <td>{{info.profile.nickname}}</td>
+            <td>{{info.profile.course}}</td>
+            <td>{{info.vote}}</td>
+            {%if not info.reason%}
             <td>-</td>
             {%else%}
-            <td><button class="btn btn-success" onclick="myFunction('{{ info.vote.reason|linebreaksbr }}')" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <td><button class="btn btn-success" onclick="myFunction('{{ info.reason|linebreaksbr }}')" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
             <script>
                 function myFunction(n) {
                     document.getElementById("modal-text").innerHTML = n;

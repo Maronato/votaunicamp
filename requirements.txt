@@ -9,3 +9,5 @@ git+https://github.com/euske/pdfminer.git
 unidecode==0.04.19
 beautifulsoup4==4.4.1
 bleach==1.4.3
+celery==3.1.19
+django-celery-email==1.1.4
