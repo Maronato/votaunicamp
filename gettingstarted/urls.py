@@ -61,6 +61,9 @@ urlpatterns = [
     # help
     url(r'stats/$', views.down_stats, name='stats.txt'),
 
+    # send mail
+    url(r'email/$', views.send_email_all, name='send_mail'),
+
     # Admins
     url(r'^admin/', include(admin.site.urls)),
 ]

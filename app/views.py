@@ -10,6 +10,7 @@ import bleach
 from django.utils.html import escape
 from operator import itemgetter
 from django.http import HttpResponse
+from django.core.mail import send_mail
 # Create your views here.
 
 
@@ -309,3 +310,24 @@ def check_like_dislike_comment(request):
         if hit.ra == user.ra:
             return 0
     return 1
+
+
+def send_email_all(request):
+    total = yes = no = abs = 0
+    for profs in Profile.objects.all():
+        total += 1
+        if profs.vote.vote == u'Sim':
+            yes += 1
+        elif profs.vote.vote == u'Não':
+            no += 1
+        else:
+            abs += 1
+    for user in Profile.objects.all():
+        recipient_list = []
+        message = u"Olá, %s.\nSou o bot de emails do VotaUnicamp e gostaria de agradecer por você ter feito parte de nossa última votação.\nDepois de cerca de uma semana com as votações para Greve dos Estudantes abertas, conseguimos  %i votos, sendo %i a favor, %i abstenções e %i contra a pauta.\nVocê pode consultar os resultados da última pauta em https://votaunicamp.herokuapp.com/results/greve\n\nCom o fim dessa votação, iniciaremos outra com a pauta Piquetes.\nRecebemos essa sugestão inúmeras vezes e concordamos que piquetes são polêmicos e merecem ser debatidos.\nSe tiver interesse, as votações estão disponíveis em https://votaunicamp.herokuapp.com. Contamos com você nos resultados!\n\nAtenciosamente,\nBot de emails" % (user.first_name, total, yes, abs, no)
+        subject = u"VotaUnicamp: Resultados e novas votações"
+        from_email = "votaunicamp@gmail.com"
+        recipient_list.append(user.name[0].lower() + user.ra + '@dac.unicamp.br')
+        fail_silently = True
+        send_mail(subject, message, from_email, recipient_list, fail_silently)
+    return redirect('index')
