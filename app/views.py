@@ -54,7 +54,7 @@ def results(request):
     uinst = set(uinst)
     for institution in uinst:
             list = Profile.objects.filter(course=institution)
-            totali = len(list)
+            totali = 0
             yesi = noi = absi = 0
             for student in list:
                 try:
@@ -64,6 +64,7 @@ def results(request):
                         noi += 1
                     else:
                         absi += 1
+                    totali += 1
                 except:
                     pass
 
