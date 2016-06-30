@@ -367,7 +367,7 @@ def check_like_dislike_comment(request):
 def send_email_all():
     for user in Profile.objects.all():
         recipient_list = []
-        message = u"Olá, %s.\n (Se você recebeu essa mensagem várias vezes, perdoe o Bot de emails. Ele não sabe o que faz.)\n Sou o bot de emails do VotaUnicamp e quero agradecer por você ter feito parte de nossa última votação.\n Primeiramente, gostaria de anunciar que o site sofreu algumas mudanças interessantes em seu formato e apresentação. Dentre elas:\n - RG não será mais necessário em novas contas e foi apagado do banco de dados das contas antigas\n - Não mais é possível ver o nome, RA ou RG do aluno nos resultados ou na discussão.\n - No lugar dessas informações será mostrado um nome fictício gerado automaticamente e único para cada usuário.\n - Na questão usuários, agora é obrigatória a criação de uma conta com senha no site.\n - É possível agora apagar sua conta por completo\n - A cada novo comentário em um argumento, todos os usuários envolvidos serão notificados via email da DAC\n Para mais informações, consulte https://github.com/Maronato/votaunicamp/blob/master/README.md\n\n Depois de cerca de duas semanas com as votações para Greve dos Estudantes abertas, conseguimos 473 votos, sendo 141 a favor, 17 abstenções e 315 contra a pauta.\n Você pode consultar os resultados da última pauta em https://votaunicamp.herokuapp.com/prev_results/\n\n Com o fim dessa votação, iniciaremos outra com a pauta Piquetes e ocupações.\n Recebemos essa sugestão inúmeras vezes e concordamos que piquetes são polêmicos e merecem ser debatidos.\n Se tiver interesse, as votações estão disponíveis em https://votaunicamp.herokuapp.com. Contamos com você nos resultados!\n\nAtenciosamente,\nBot de emails" % (user.first_name)
+        message = u"Olá, %s.\n Sou o bot de emails do VotaUnicamp e quero agradecer por você ter feito parte de nossa última votação.\n Primeiramente, gostaria de anunciar que o site sofreu algumas mudanças interessantes em seu formato e apresentação. Dentre elas:\n - RG não será mais necessário em novas contas e foi apagado do banco de dados das contas antigas\n - Não mais é possível ver o nome, RA ou RG do aluno nos resultados ou na discussão.\n - No lugar dessas informações será mostrado um nome fictício gerado automaticamente e único para cada usuário.\n - Na questão usuários, agora é obrigatória a criação de uma conta com senha no site.\n - É possível agora apagar sua conta por completo\n - A cada novo comentário em um argumento, todos os usuários envolvidos serão notificados via email da DAC\n Para mais informações, consulte https://github.com/Maronato/votaunicamp/blob/master/README.md\n\n Depois de cerca de duas semanas com as votações para Greve dos Estudantes abertas, conseguimos 473 votos, sendo 141 a favor, 17 abstenções e 315 contra a pauta.\n Você pode consultar os resultados da última pauta em https://votaunicamp.herokuapp.com/prev_results/\n\n Com o fim dessa votação, iniciaremos outra com a pauta Piquetes e ocupações.\n Recebemos essa sugestão inúmeras vezes e concordamos que piquetes são polêmicos e merecem ser debatidos.\n Se tiver interesse, as votações estão disponíveis em https://votaunicamp.herokuapp.com. Contamos com você nos resultados!\n\nAtenciosamente,\nBot de emails" % (user.first_name)
         subject = u"VotaUnicamp: Atualização, resultados e novas votações"
         from_email = "votaunicamp@gmail.com"
         recipient_list.append(user.name[0].lower() + user.ra + '@dac.unicamp.br')
@@ -405,7 +405,10 @@ def test(request):
 
 
 def update(request):
-    send_email_all()
+    for profile in Profile.objects.all():
+        nick = email_functions.gen_random_nickname()
+        profile.nickname = nick
+        profile.save()
     return redirect('index')
 
 

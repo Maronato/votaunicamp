@@ -141,4 +141,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_BACKEND = 'djcelery_email.backends.CeleryEmailBackend'
-CELERY_BROKER_URL = os.environ.get('RABBITMQ_BIGWIG_TX_URL')
+CELERY_BROKER_URL = os.environ.get('RABBITMQ_BIGWIG_URL')
