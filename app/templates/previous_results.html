@@ -1,0 +1,6842 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>Resultados finais</h1>
+        <p>Sobre a pauta Greve dos Estudantes</p>
+        <a type="button" class="btn btn-lg btn-primary" href="/results/"><span class="glyphicon glyphicon-th-list"></span> Voltar para pauta atual!</a>
+    </div>
+</div>
+<div class="container">
+    <h2>Votos totais:</h2>
+    <div class="container-fluid table-responsive">
+        <table data-role="table" class="table table-striped">
+            <tbody><tr>
+                <th>Total</th>
+                <th>Sim</th>
+                <th>Abstenções</th>
+                <th>Não</th>
+            </tr>
+            <tr>
+                <td>473</td>
+                <td>141 (29.81%)</td>
+                <td>17 (3.59%)</td>
+                <td>315 (66.6%)</td>
+            </tr>
+        </tbody></table>
+    </div>
+    <hr>
+    <h3>Votos por curso:</h3>
+    <div class="container-fluid table-responsive">
+        <table data-role="table" class="table table-striped">
+            <tbody><tr>
+                <th>Curso</th>
+                <th>Total</th>
+                <th>Sim</th>
+                <th>Abstenções</th>
+                <th>Não</th>
+            </tr>
+
+            <tr>
+
+                <td>1 - Matemática</td>
+
+                <td>3</td>
+
+                <td>2 (66.7%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (33.3%)</td>
+
+
+            </tr><tr>
+
+                <td>1 - Mestrado em Matemática</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>10 - Engenharia Mecânica</td>
+
+                <td>40</td>
+
+                <td>10 (25.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>30 (75.0%)</td>
+
+
+            </tr><tr>
+
+                <td>10 - Mestrado em Engenharia Mecânica</td>
+
+                <td>4</td>
+
+                <td>2 (50.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (50.0%)</td>
+
+
+            </tr><tr>
+
+                <td>100 - Ciências do Esporte</td>
+
+                <td>2</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>101 - Engenharia de Manufatura</td>
+
+                <td>3</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>102 - Engenharia de Produção</td>
+
+                <td>3</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>105 - Gestão de Empresas</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>107 - Nutrição</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>108 - Engenharia Física</td>
+
+                <td>2</td>
+
+                <td>1 (50.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (50.0%)</td>
+
+
+            </tr><tr>
+
+                <td>109 - Administração</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>11 - Dout. em Genética e Biologia Molecular</td>
+
+                <td>3</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>11 - Engenharia Elétrica</td>
+
+                <td>30</td>
+
+                <td>3 (10.0%)</td>
+
+                <td>1 (3.3%)</td>
+
+                <td>26 (86.7%)</td>
+
+
+            </tr><tr>
+
+                <td>11 - Mestrado em Engenharia Elétrica</td>
+
+                <td>2</td>
+
+                <td>1 (50.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (50.0%)</td>
+
+
+            </tr><tr>
+
+                <td>12 - Engenharia Civil</td>
+
+                <td>12</td>
+
+                <td>2 (16.7%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>10 (83.3%)</td>
+
+
+            </tr><tr>
+
+                <td>12 - Mestrado em Engenharia Civil</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>13 - Doutorado em Ecologia</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>13 - Engenharia de Alimentos</td>
+
+                <td>4</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>4 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>14 - Odontologia</td>
+
+                <td>4</td>
+
+                <td>1 (25.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (75.0%)</td>
+
+
+            </tr><tr>
+
+                <td>15 - Medicina</td>
+
+                <td>5</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>5 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>16 - Ciências Sociais</td>
+
+                <td>8</td>
+
+                <td>6 (75.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (25.0%)</td>
+
+
+            </tr><tr>
+
+                <td>17 - Ciências Econômicas</td>
+
+                <td>11</td>
+
+                <td>3 (27.3%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>8 (72.7%)</td>
+
+
+            </tr><tr>
+
+                <td>18 - Linguística</td>
+
+                <td>3</td>
+
+                <td>3 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>19 - História</td>
+
+                <td>3</td>
+
+                <td>3 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>2 - Estatística</td>
+
+                <td>30</td>
+
+                <td>5 (16.7%)</td>
+
+                <td>1 (3.3%)</td>
+
+                <td>24 (80.0%)</td>
+
+
+            </tr><tr>
+
+                <td>2 - Mestrado em Estatística</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>200 -  Programa de Formação Interdisciplinar Superior - ProFIS</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>22 - Música</td>
+
+                <td>5</td>
+
+                <td>5 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>26 - Artes Cênicas</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>27 - Educação Física</td>
+
+                <td>5</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>5 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>28 - Matemática Aplicada e Computacional</td>
+
+                <td>2</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>29 - Licenciatura em Matemática</td>
+
+                <td>4</td>
+
+                <td>1 (25.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (75.0%)</td>
+
+
+            </tr><tr>
+
+                <td>3 - Mestrado em Ciência da Computação</td>
+
+                <td>4</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>4 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>33 - Dout.em Ciênc.Nutr.e do Esp. e Metabol.</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>34 - Engenharia de Computação</td>
+
+                <td>33</td>
+
+                <td>7 (21.2%)</td>
+
+                <td>2 (6.1%)</td>
+
+                <td>24 (72.7%)</td>
+
+
+            </tr><tr>
+
+                <td>36 - Superior Tecn. Análise e Desenv.Sistemas</td>
+
+                <td>2</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>38 - Pedagogia</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>39 - Engenharia Química</td>
+
+                <td>7</td>
+
+                <td>3 (42.9%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>4 (57.1%)</td>
+
+
+            </tr><tr>
+
+                <td>4 - Física</td>
+
+                <td>15</td>
+
+                <td>4 (26.7%)</td>
+
+                <td>2 (13.3%)</td>
+
+                <td>9 (60.0%)</td>
+
+
+            </tr><tr>
+
+                <td>4 - Mestr.Prof. em Mat.Aplic.e Computacional</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>40 - Licenciatura em Física</td>
+
+                <td>7</td>
+
+                <td>5 (71.4%)</td>
+
+                <td>2 (28.6%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>40 - Mestrado em Linguística Aplicada</td>
+
+                <td>1</td>
+
+                <td>1 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>41 - Engenharia Elétrica</td>
+
+                <td>17</td>
+
+                <td>4 (23.5%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>13 (76.5%)</td>
+
+
+            </tr><tr>
+
+                <td>42 - Ciência da Computação</td>
+
+                <td>17</td>
+
+                <td>4 (23.5%)</td>
+
+                <td>1 (5.9%)</td>
+
+                <td>12 (70.6%)</td>
+
+
+            </tr><tr>
+
+                <td>43 - Engenharia de Alimentos</td>
+
+                <td>7</td>
+
+                <td>1 (14.3%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>6 (85.7%)</td>
+
+
+            </tr><tr>
+
+                <td>44 - Ciências Sociais</td>
+
+                <td>6</td>
+
+                <td>4 (66.7%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (33.3%)</td>
+
+
+            </tr><tr>
+
+                <td>45 - Educação Física</td>
+
+                <td>3</td>
+
+                <td>1 (33.3%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (66.7%)</td>
+
+
+            </tr><tr>
+
+                <td>46 - Licenciatura em Ciências Biológicas</td>
+
+                <td>10</td>
+
+                <td>2 (20.0%)</td>
+
+                <td>1 (10.0%)</td>
+
+                <td>7 (70.0%)</td>
+
+
+            </tr><tr>
+
+                <td>47 - Ciências Econômicas</td>
+
+                <td>8</td>
+
+                <td>5 (62.5%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (37.5%)</td>
+
+
+            </tr><tr>
+
+                <td>48 - Arquitetura e Urbanismo</td>
+
+                <td>5</td>
+
+                <td>5 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>49 - Engenharia de Controle e Automação</td>
+
+                <td>17</td>
+
+                <td>8 (47.1%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>9 (52.9%)</td>
+
+
+            </tr><tr>
+
+                <td>5 - Mestrado em Química</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>5 - Química</td>
+
+                <td>23</td>
+
+                <td>9 (39.1%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>14 (60.9%)</td>
+
+
+            </tr><tr>
+
+                <td>50 - Química Tecnológica</td>
+
+                <td>10</td>
+
+                <td>3 (30.0%)</td>
+
+                <td>1 (10.0%)</td>
+
+                <td>6 (60.0%)</td>
+
+
+            </tr><tr>
+
+                <td>51 - Doutorado em Matemática</td>
+
+                <td>2</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+
+                <td>12</td>
+
+                <td>4 (33.3%)</td>
+
+                <td>2 (16.7%)</td>
+
+                <td>6 (50.0%)</td>
+
+
+            </tr><tr>
+
+                <td>53 - Doutorado em Ciência da Computação</td>
+
+                <td>3</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>53 - Geologia</td>
+
+                <td>2</td>
+
+                <td>1 (50.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (50.0%)</td>
+
+
+            </tr><tr>
+
+                <td>54 - Doutorado em Física</td>
+
+                <td>2</td>
+
+                <td>1 (50.0%)</td>
+
+                <td>1 (50.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>55 - Doutorado em Química</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>55 - Geografia</td>
+
+                <td>2</td>
+
+                <td>2 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>56 - Licenciatura Integrada Química/Física</td>
+
+                <td>4</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>4 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>57 - Doutorado em Teoria e História Literária</td>
+
+                <td>1</td>
+
+                <td>1 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>58 - Fonoaudiologia</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>6 - Ciências Biológicas</td>
+
+                <td>13</td>
+
+                <td>6 (46.2%)</td>
+
+                <td>1 (7.7%)</td>
+
+                <td>6 (46.2%)</td>
+
+
+            </tr><tr>
+
+                <td>60 - Superior Tecn. Análise e Desenv.Sistemas</td>
+
+                <td>2</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>61 - Doutorado em Engenharia Elétrica</td>
+
+                <td>2</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>2 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>62 - Mestr. em Genética e Biologia Molecular</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>63 - Farmácia</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>64 - Comunicação Social - Midialogia</td>
+
+                <td>5</td>
+
+                <td>3 (60.0%)</td>
+
+                <td>1 (20.0%)</td>
+
+                <td>1 (20.0%)</td>
+
+
+            </tr><tr>
+
+                <td>66 - Doutorado em Ciências Sociais</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>7 - Licenciatura em Letras - Português</td>
+
+                <td>2</td>
+
+                <td>1 (50.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (50.0%)</td>
+
+
+            </tr><tr>
+
+                <td>70 - Doutorado em Educação</td>
+
+                <td>1</td>
+
+                <td>1 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>75 - Estudos Literários</td>
+
+                <td>4</td>
+
+                <td>3 (75.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (25.0%)</td>
+
+
+            </tr><tr>
+
+                <td>78 - Doutorado em Educação Física</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>79 - Doutorado em Matemática Aplicada</td>
+
+                <td>2</td>
+
+                <td>1 (50.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (50.0%)</td>
+
+
+            </tr><tr>
+
+                <td>8 - Engenharia Agrícola</td>
+
+                <td>7</td>
+
+                <td>1 (14.3%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>6 (85.7%)</td>
+
+
+            </tr><tr>
+
+                <td>83 - Mestr.Bioc. e Tec. de Produtos Bioativos</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>89 - Engenharia Ambiental</td>
+
+                <td>1</td>
+
+                <td>1 (100.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+
+            </tr><tr>
+
+                <td>9 - Engenharia Química</td>
+
+                <td>4</td>
+
+                <td>1 (25.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>3 (75.0%)</td>
+
+
+            </tr><tr>
+
+                <td>92 - Dout.na Área Int. Plan.Sist.Energéticos</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr><tr>
+
+                <td>98 - Doutorado em Ciências e Engª de Petróleo</td>
+
+                <td>1</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>0 (0.0%)</td>
+
+                <td>1 (100.0%)</td>
+
+
+            </tr>
+        </tbody></table>
+    </div>
+    <hr>
+    <h4>Detalhes de cada voto:</h4>
+    <input type="search" id="search" class="light-table-filter form-control" data-table="order-table" placeholder="Pesquisar votos...">
+    <table id="table" class="table table-striped order-table">
+        <thead>
+        <tr>
+            <th data-priority="1">Nome</th>
+
+            <th data-priority="1">RG</th>
+            <th data-priority="1">Curso</th>
+            <th data-priority="1">Voto</th>
+            <th data-priority="1">Justificativa</th>
+
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>Daniel </td>
+
+            <td>287****-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus </td>
+
+            <td>397*****-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Nelson </td>
+
+            <td>274*****-0</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>37.***.***-1</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Miguel </td>
+
+            <td>396******-</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>469*****-2</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Caique </td>
+
+            <td>468*****-2</td>
+            <td>15 - Medicina</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Jessica </td>
+
+            <td>422*****-7</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Felipe </td>
+
+            <td>474*****-8</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fabio </td>
+
+            <td>338*****-2</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marcelo </td>
+
+            <td>391*****-8</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael </td>
+
+            <td>479*****-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Todas as pautas deveriam ser discutidas fora do horário de aula. Considero abusivo o desrespeito ao direito dos demais alunos terem aulas e o custo que a greve causa aos contribuintes. Por Unicamp em que o pensamento de esquerda não seja regra para todos os alunos.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Wellington </td>
+
+            <td>490*****-2</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não há transparência em relação à reserva financeira das despesas empenhadas, montante em torno e 700 000 000,00 de reais. Não há transparência sobre como os super salários atingiram esse valor (há quem diga que aplicando todos os adicionais ainda assim não chegam no valor da primeira matrícula que dirá da segunda). Existem suspeitas de muitos servidores aposentados irregularmente em décadas passadas.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Giordanno </td>
+
+            <td>550****-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus </td>
+
+            <td>481******-</td>
+            <td>64 - Comunicação Social - Midialogia</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ana </td>
+
+            <td>134*******-</td>
+            <td>15 - Medicina</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rodrigo </td>
+
+            <td>495*****-</td>
+            <td>43 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas </td>
+
+            <td>402*****-8</td>
+            <td>64 - Comunicação Social - Midialogia</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas </td>
+
+            <td>489*****-5</td>
+            <td>2 - Estatística</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo </td>
+
+            <td>368*****-7</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Emily </td>
+
+            <td>434*****-9</td>
+            <td>4 - Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Joao </td>
+
+            <td>508******-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leandro </td>
+
+            <td>54.***.***-6</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ivan </td>
+
+            <td>298*****-6</td>
+            <td>79 - Doutorado em Matemática Aplicada</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel </td>
+
+            <td>492*****-7</td>
+            <td>44 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Jadir </td>
+
+            <td>432*****-9</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bruno </td>
+
+            <td>50.***.***-</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>lio </td>
+
+            <td>502******-</td>
+            <td>64 - Comunicação Social - Midialogia</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Henrique </td>
+
+            <td>491*****-3</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Abdalla </td>
+
+            <td>-14*****9</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Infelizmente, a proposta de greve atual não passa de uma manobra politica de um DCE que sobrepõe as vontades do partido que o financia aos interesses dos alunos.&lt;br /&gt;As primeiras manifestações foram feitas para mostrar o descontentamento no famoso &amp;quot;golpe&amp;quot; do Temer (O que não há nada de errado, mesmo não parecendo, ainda somos uma democracia). Pelo que me pareceu, o movimento não repercutiu o quanto o DCE esperava. &lt;br /&gt;O que fazer para atrair mais pessoas?Basta colocar temas como Ampliação de Moradia e Cortes na Unicamp que facilmente os estudantes irão adererir. Quem em sã consciência quer que haja cortes ou não quer a moradia seja ampliada? No entanto, se a moradia era pra ter 1500 vagas há mais de uma década atrás, porque o DCE se mobilizou apenas agora? A reitoria não deveria estar ocupada há mais de uma década então? Mas foi só o &amp;quot;golpe&amp;quot; acontecer, que coincidentemente brotou um espírito de coletivismo no DCE em prol da moradia. Além disso, para aumentar a greve, bastou o movimento apoiar a tão sonhada isonomia dos trabalhadores, a qual estes lutam a anos para conseguir, e, deixo enfatizado aqui EU NÃO SOU CONTRA A ISONOMIA.&lt;br /&gt;Mas, sejamos racionais, por um instante. Para, no mínimo, dobrar a moradia, acho que todos aqui sabemos o quão é valorizado o m² em Barão Geraldo, dar isonomia para os trabalhadores e não ter cortes, quanto vocês estimam que vai aumentar nos gastos da Unicamp? A verba das universidades estaduais vêm do repasse do ICMS. Não sei se todos sabem, mas o país está em crise, pela primeira vez na história da república temos 3 anos de recessão consecutivos (parabéns aos envolvidos) e o ICMS está diretamente ligado a isso. Nossa arrecadação deve cair em 2017 e talvez em 2018, para só voltar a subir levemente em 2019. Para piorar, vamos supor que os gastos da Unicamp não ligado à salários subam proporcionalmente à inflação. Temos então, arrecadação diminuindo e gastos aumentando. Não é preciso ser um gênio da matemática, nem da economia, para perceber que é impossível atender as exigências da greve.&lt;br /&gt;A única opção seria aumentar o repasse, mas iniciativa privada ou doações são vistas como medidas maléficas privatizadoras demoníacas patriarcais pelo DCE. &lt;br /&gt;E minha unica pergunta é: e ai DCE, o dinheiro vai vir da onde? Por que que seu partido socialista não enviar verba pra Unicamp e financia a isonomia, os cortes e a ampliação da moradia?&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>355****-</td>
+            <td>9 - Engenharia Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Giovanna </td>
+
+            <td>379*****-8</td>
+            <td>102 - Engenharia de Produção</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus </td>
+
+            <td>520*****-4</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Raone </td>
+
+            <td>377*****-9</td>
+            <td>108 - Engenharia Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Greve estudantil, usando de piquetes e ferramentas autoritárias para atrair alunos, além de ago completamente errado e ilegal é a pior forma de conseguir algo, principalmente na Unicamp que os canais de comunicação são bem abertos.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Nicolas </td>
+
+            <td>497*****-7</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Catarina </td>
+
+            <td>470******-</td>
+            <td>107 - Nutrição</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A paralisação das aulas só afeta os alunos, e não o sistema. Deve-se terminar o semestre e pensar em estratégias que realmente atinjam o sistema, como segurar as notas por exemplo.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Victor </td>
+
+            <td>231****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;- Ninguém é obrigado a participar de nenhuma greve/paralisação. (Isto está sendo imposto pelos piquetes autoritários)&lt;br /&gt;- As assembleias que votam greves/paralisações não são representativas e fazem valer a vontade de uma minoria, principalmente as pessoas com uma determinada visão política. (Iniciativas como esse site mostrarão a vontade da maioria)&lt;br /&gt;- As mobilizações apresentam alguns objetivos válidos, porém o ESTOPIM para elas foi a saída de Dilma da presidência, visto pelos grevistas como &amp;quot;golpe&amp;quot;. No fundo, as mobilizações tem ideal político.&lt;br /&gt;- A nossa economia vive em crise séria e a arrecadação de ICMS (principal fonte de receitas da Unicamp) caiu muito e cairá ainda mais nos próximos anos. É preciso colocar o pé no chão e entender que é impossível atender as demandas de uma década nesse momento.&lt;br /&gt;- As diversas &amp;quot;atividades&amp;quot; promovidas pelos institutos em greve e pelos movimentos grevistas durante a paralisação possuem ideologia totalmente unilateral e indiscutível, e não representam um real ambiente de debate sobre os acontecimentos nas Universidades.&lt;br /&gt;-Os mais prejudicados com a greve são os alunos que estão na universidade para estudar, e não para militar. Os professores estão passando conteúdo online e não vão alterar a data das provas.&lt;br /&gt;-Muitos outros motivos.....&lt;br /&gt;- &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Lucas </td>
+
+            <td>-11*****8</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro </td>
+
+            <td>351******-</td>
+            <td>102 - Engenharia de Produção</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Joao </td>
+
+            <td>37.***.***-7</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39; As assembleias são pouquissimo representativas uma vez que representam sempre menos da metade dos integrantes das faculdades e institutos. Logo, a votação por greve é totalmente enviezada, quando não manipulada por partidos políticos por detrás. Além disso, é perfeitamente possível o requerimento das pautas durante o período letivo normal. Os canais com as coordenadorias são bastante abertos e basta um diálogo (que pressupõe disposição para ouvir o que lhe é contrário) e respeito por parte dos centros acadêmicos no momento de expor seus argumentos aos professores.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>942*****-</td>
+            <td>11 - Dout. em Genética e Biologia Molecular</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve é política e no fundo há o sórdido desejo de PSOL etc de desestabilizar o governo de oposição apenas porque é de opsição. Não há uma real vontade de melhorar algo. Pautada pelo descontentamento com o impeachment e, para desviar dessa informação, outras sub-pautas surgiram. Como negar cortes do orçamento SE A ARRECADAÇÂO CAIU? E caiu por causa do governo que é apoiado justamente pelos organizadores da greve. Vc que está indeciso sobre ou aberto a informações pense bem, pois pode estar sendo manipulado. DCE e os organizadores da greve têm apoio de partidos (PSOL, PCdoB, PT etc) e isso não é segredo. Pense bem... Outro ponto: cotas para quê? Por que o pessoal não pressionou o governo do PT nesses 14 anos para investir no ensino de base de forma que todos pudessem ifgualmente competir na universidade? Estranho, não? Pois é, mais uma demostração do partidarismo que há por trás disso. As cotas não vão melhorar a situação das pessoas, apenas vão perpetuar o péssimo sistema educacional público brasileiro. Pense nisso...Mais um ponto: são vários os relatos de alunos e professores sendo agredidos nos piquetes. Isso é inaceitável! Ouvi relatos de pessoas que foram agredidas sob o argumento de que &amp;quot;vc é a favor de que o professor dê aulas (sic), então tem que apanhar mesmo&amp;quot;. Enfim, não dá para apoiar um movimento partidário e sem reais intenções para com a socieade que banca a Unicamp.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Torino </td>
+
+            <td>387*****-4</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Joseph </td>
+
+            <td>497*****-9</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Primeiramente, gostaria de deixar claro meu apoio a grande parte das pautas reivindicadas atualmente. Porém, os meios utiizados para divulgar/enforçar/reivindicar estão sendo abusivos e muitas vezes não diferem em nada de muitas atitudes que eles mesmos(e eu) criticamos ferozmente. Fora a contradição em querer de volta aos 40 milhoes cortados, mas ao mesmo tempo jogar dinheiro da universidade fora ao ficar parado. Essa greve, do jeito que está, também acaba prejudicando muito mais aos alunos do que a reitoria, que aparenta ser o principal alvo das manifestacoes. Até agora, corrijam-me se estiver errado, não vi uma vitória significativa para o movimento estudantil, enquanto vi muita gente se voltar contra ele pelo jeito que está sendo tocado.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Lucas </td>
+
+            <td>486*****-1</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Nikolas </td>
+
+            <td>208******-</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>vio </td>
+
+            <td>391*****-7</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Poliana </td>
+
+            <td>492*****-0</td>
+            <td>36 - Superior Tecn. Análise e Desenv.Sistemas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Daniel </td>
+
+            <td>426*****-6</td>
+            <td>60 - Superior Tecn. Análise e Desenv.Sistemas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Carlos </td>
+
+            <td>115*******-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Raphael </td>
+
+            <td>475******-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não sou a favor pelo simples fato de entender o cenário político-econômico atual, onde estamos inseridos em uma recessão, e é ilógico de todas as formas possíveis aumentar o repasse do ICMS para as 3 universidades públicas de SP.&lt;br /&gt;E claro, sem o aumento do dinheiro, não é possível atender as exigências dos grevistas hoje.Gostaria que essas mudanças fossem feitas de forma pensada e planejada, não gastando o fundo de reserva da Unicamp e quebrando a faculdade, assim como aconteceu com a USP. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Eduardo </td>
+
+            <td>354*****-5</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rhael </td>
+
+            <td>364*****-9</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael </td>
+
+            <td>322*****-2</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ramom </td>
+
+            <td>488*****-7</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Barbara </td>
+
+            <td>401*****-1</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor </td>
+
+            <td>500******-</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo </td>
+
+            <td>470*****-</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Alexandre </td>
+
+            <td>370*****-8</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>cius </td>
+
+            <td>310****-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>485*****-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo </td>
+
+            <td>37.***.***-5</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>439******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fábio</td>
+
+            <td>488*****-6</td>
+            <td>4 - Física</td>
+            <td>Abstenção</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;É uma decisão difícil. A princípio não acredito que seja um meio eficiente e não concordo com alguns pontos quanto a forma com que está sendo feita. Na minha opinião existem outros meios para os alunos protestarem que podem gerar menos desgaste e mais resultados.&lt;br /&gt;&lt;br /&gt;No entanto, na situação atual, essas outras possibilidades se tornaram inviáveis a curto prazo, não restando muitas opções.&lt;br /&gt;&lt;br /&gt;É claro que uma greve totalmente facultativa seria o ideal, mas também é claro que poucos são os que estão dispostos a participar de algo assim ( e isso é triste, pois mostra um egoísmo disfarçado de altruísmo da parte de muitos) . Enfim, vou tentar colocar todos os pontos na mesa e depois tomar minha decisão final.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Aline </td>
+
+            <td>479*****-5</td>
+            <td>56 - Licenciatura Integrada Química/Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Natalia </td>
+
+            <td>526******-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael </td>
+
+            <td>361*****-4</td>
+            <td>39 - Engenharia Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Thiago </td>
+
+            <td>469*****-1</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Carlos </td>
+
+            <td>545******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Renata </td>
+
+            <td>387*****-4</td>
+            <td>9 - Engenharia Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fernanda </td>
+
+            <td>520*****-5</td>
+            <td>63 - Farmácia</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Raquel </td>
+
+            <td>369*****-</td>
+            <td>13 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Nossa, o que falar da greve?&lt;br /&gt;Não é nem de longe a melhor forma de fazer melhorias!! Não é necessário parar as aulas para ter discussão! Discussão pode ter em horários de almoço e janta! Manifestações e passeatas são muito mais efetivas e úteis!! Impeachment foi conseguido apenas com isso!! Não teve nenhuma greve!&lt;br /&gt;Além disso é uma contradição parar a educação para melhorar a educação! Educação não deve parar nunca!!! Greve é o último dos últimos recursos e deve ser evitada ao máximo!!! &lt;br /&gt;Outra coisa: a greve é feita de forma errada! Ela é legítima? Sim, se você quiser classificá-la na lei da greve, mas ao classificá-la como seu direito/legítima e, portanto, dentro da lei, é necessário seguir a lei! E ela não é seguida na Unicamp (e em outras universidades): piquete, tão comum nessa greve, é CRIME!!! Então se ao menos eles (grevistas) seguissem a lei, teriam o meu respeito (embora tenham em qualquer situação minha pena), mas ao deixarem de seguir a lei eles têm meu total desprezo!&lt;br /&gt;Outra coisa: não há o mínimo respeito pelos que não aderem à greve!! Ainda tendo a lei em vista: tem que ter assembléia sim! Mas não é porque foi votado em assembléia que todos são obrigados a aderir! Não aderir e continuar com as atividades normais é um DIREITO nosso!! Greve NÃO É DITADURA!! Embora ela seja tratada assim na Unicamp! &lt;br /&gt;Mais um ponto: eles colocam mil pautas na greve! Eu não concordo com todas!!  E eles não tem o mínimo de respeito por outras opiniões (embora os grevistas em sua maioria sejam aqueles esquerdistas que se DIZEM defender as minorias, agora eu pergunto? Quais minorias??? Só as do interesse deles, né??). &lt;br /&gt;Mais um ponto? Eles dizem ter greve e fazer piquete para os alunos que aderiram poderem ir às discussões sem ser prejudicados (já que estariam faltando às aulas para irem às discussões), mas na FEA, de 140 pessoas votaram a favor da greve (o que a meu ver é ridículo porque não representa 750 alunos). Porém, no primeiro dia de discussão de um dos temas e pautas tãooo importantes que tem que parar TODAS as atividades atrapalhando a vida de muitos estudantes, tinha 20, e repito, VINTE pessoas na discussão!! Sendo que de 5 a 10 pessoas ali (não sei o número exato) eram CONTRA a greve!!! Onde estavam as outras pessoas??? Greve não é para discutir??? ME POUPE!!!  &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Hugo </td>
+
+            <td>498*****-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Melhor forma de pressão no Tadeuzinho&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Arthur </td>
+
+            <td>465*****-7</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lukas </td>
+
+            <td>-15*****2</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;As assembléias são pouco acessíveis. Além disso a grave tem claro viés político externo a Unicamp.&lt;br /&gt;É claro também que é uma minoria que deseja a greve e essa minoria vem impondo sua vontade sem real debate.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Matheus </td>
+
+            <td>-11*****8</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro </td>
+
+            <td>374*****-1</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Denizar </td>
+
+            <td>482*****-2</td>
+            <td>44 - Ciências Sociais</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Juliana </td>
+
+            <td>557*****-4</td>
+            <td>2 - Estatística</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Giacomo </td>
+
+            <td>472****-</td>
+            <td>54 - Doutorado em Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mariana </td>
+
+            <td>476*****-1</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Winnye </td>
+
+            <td>388******-</td>
+            <td>101 - Engenharia de Manufatura</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luisa </td>
+
+            <td>392******-</td>
+            <td>101 - Engenharia de Manufatura</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Acredito que certos assuntos reivindicados não são plausíveis&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>ctor </td>
+
+            <td>534****-8</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Felipe </td>
+
+            <td>200**********-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>231****-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ana </td>
+
+            <td>487*****-</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>508******-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;As pautas são justas e certamente devem ser discutidas. Entretanto, impedir que as pessoas exerçam o seu direito de assistirem às aulas é uma atitude anti-democrática. Acredito que as reivindicações devam ocorrer por meios legais, mantendo o respeito pelo ensino dentro da universidade e sem participação de partidos políticos.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>361*****-6</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel </td>
+
+            <td>200********-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;https://www.facebook.com/groups/GrupoUnicamp/10154097896205446/?notif_t=like¬if_id=1465816151433993&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>o </td>
+
+            <td>351*****-9</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Yugo </td>
+
+            <td>381*****-1</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro </td>
+
+            <td>471*****-4</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Giovani </td>
+
+            <td>160*****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve não atingiu os fins propostos, e agora acredito que está sendo mais nociva à educação do que benéfica - a tentativa de diálogo com a reitoria, bem como as pautas propostas não devem ser deixadas de lado. Mas acredito que a forma de luta - para este momento - deixou de valer a pena&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Joicy </td>
+
+            <td>487*****-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Nicolas </td>
+
+            <td>143*******-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Murilo </td>
+
+            <td>333*****-9</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Um país em crise não precisa de gente parada, nossa juventude precisa se acostumar a resolver os problemas em conjunto com órgãos competentes e não simplesmente sentando, e se chamando de grevistas. A greve é uma ferramenta muito poderosa que deve ser utilizada somente com apoio da grande maioria, caso contrário não passa de uma birra de uma minoria que se vê mais intelectual do que os outros e logo pode impor aquilo que acha certo em forma de piquetes, bloqueio de passagens, manifestações. Nunca vi um estudante se quer dizendo que iria tentar conversar com professores, criar grupos de trabalho visando uma metodologia de ensino melhor. Nunca vi alguém se questionando sobre o limite de verbas que a Unicamp possui, e comparando seu orçamento com os de universidades de ponta no exterior (a Unicamp vive de nome somente, pois ao ser comparada com qualquer universidade grande no exterior, da dó de ver o tamanho de seu orçamento e como é mal gasto por conta de políticas que não funcionam). Não sou a favor da greve como ela é, sim é verdade que ela despertou o senso critico de alguns poucos, mas essa greve está mais destrutiva do que construtiva, se a juventude deste país não quer construir um futuro melhor em conjunto com o legado deixado pelo passado, não sei se quero continuar neste país, mesmo eu ainda sendo jovem.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Iago </td>
+
+            <td>188*****-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Thales </td>
+
+            <td>387*****-5</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Maria </td>
+
+            <td>723****-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Acho que talvez se a greve tivesse um foco maior e estivesse mais organizada, eu seria a favor. Porém, acho que com a enorme quantidade de motes, estão querendo abraçar o mundo e na atual situação do pais isso é muita utopia. Acredito que principalmente o assunto da moradia é muito importante e esse eu apoio, mas li todas as cartas propostas dos manifestantes e acho que é inviavel conseguir tudo aquilo com a atual demanda de dinheiro. Alem disso, sou contra os piquetes no cb e pb, pois existem aulas lá (como de mc102, mc202, etc, turmas com alunos EXCLUSIVAMENTE da computação, que não está em greve) de materias de institutos que não estão em greve ou que estão em greve e não querem fazer piquete (como o ifgw) e foi tirado o direito desses institutos de usufruirem do espaço, o que eu acho muito errado.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Renan </td>
+
+            <td>325*****-9</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>420*****-8</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Joao </td>
+
+            <td>200**********-</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>David </td>
+
+            <td>495*****-0</td>
+            <td>8 - Engenharia Agrícola</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve atual segue uma agenda político-ideológica e não representa a maior parte dos alunos. Seja como for, entendo o momento econômico do meu país, entendo as restrições orçamentárias da UNICAMP e entendo que minha melhor contribuição é trabalhando e produzindo na minha faculdade. &lt;br /&gt;Que resposta o grevista dará à população que mantém toda a estrutura da universidade? Que resposta ao pagador de imposto, que vê a UNICAMP parada  e o seu dinheiro indo para o ralo? Que resposta a todos os outros membros da comunidade acadêmica que desejam trabalhar e são impedidos pelos piquetes?&lt;br /&gt;Ainda que seja possível justificar um movimento por algumas das pautas proposta, vejo a prática do piquete como abusiva e violenta e, portanto, injustificável. &lt;br /&gt;Durante os 4 anos que estou na faculdade, não houve um único convite para que a comunidade da Feagri debatesse temas como permanência, orçamento, cotas ou qualquer outro tema. O Centro Acadêmico não convidou os alunos nem uma única vez em 4 anos. Por que razão convocar todas essas bandeiras agora, e sob a forma de paralisação? Por que convidar alunos de outros cursos para as nossas assembleias, quando todos eles possuem a mesma opinião? Por que votar paralisação ANTES de votar as pautas? Por que não fazer uma única tentativa de votação online?&lt;br /&gt;A mim me parece que todo o movimento anda totalmente enviesado e, por isso, voto não.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Diogo </td>
+
+            <td>884****-2</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>nica </td>
+
+            <td>537*****-0</td>
+            <td>43 - Engenharia de Alimentos</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Tiago </td>
+
+            <td>489*****-1</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Principalmente devido aos piquetes que violam a liberdade de adesão ou não à greve. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Hugo </td>
+
+            <td>410******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Angelica </td>
+
+            <td>443******-</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bruno </td>
+
+            <td>469*****-7</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Jorge </td>
+
+            <td>495*****-5</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Sem greve não haverá melhoria no sistema de cotas da unicamp e nem ampliação das políticas de permanência estudantil que estão a anos defasadas!&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Eduardo </td>
+
+            <td>503*****-7</td>
+            <td>101 - Engenharia de Manufatura</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>o </td>
+
+            <td>381*****-2</td>
+            <td>39 - Engenharia Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor </td>
+
+            <td>520*****-7</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Paulo </td>
+
+            <td>486*****-8</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Jean </td>
+
+            <td>485*****-4</td>
+            <td>29 - Licenciatura em Matemática</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Pessoalmente acredito que greve na educação, de forma geral, traz prejuízos aos estudantes. A atual greve dos estudantes da Unicamp, apesar das reivindicações serem muito justas, a ordem em que o movimento se estruturou foi muito desorganizada (por exemplo, a ocupação da reitoria que se deu antes mesmo da greve e paralisações por parte dos institutos), por isso vejo que a greve agora tem mais peso simbólico do que realmente efetivo as pautas.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>104*****-1</td>
+            <td>43 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo </td>
+
+            <td>366*****-0</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo </td>
+
+            <td>456*****-</td>
+            <td>43 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Relação aluno e professor destruída.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Matheus </td>
+
+            <td>393*****-9</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>cius </td>
+
+            <td>495*****-0</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Danilo </td>
+
+            <td>524*****-</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bruno </td>
+
+            <td>468*****-0</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas </td>
+
+            <td>355******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>367******-</td>
+            <td>27 - Educação Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael </td>
+
+            <td>413*****-9</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marcelo </td>
+
+            <td>497*****-3</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>405*****-3</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor </td>
+
+            <td>200**********-</td>
+            <td>5 - Mestrado em Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Arthur </td>
+
+            <td>353*****-0</td>
+            <td>83 - Mestr.Bioc. e Tec. de Produtos Bioativos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas </td>
+
+            <td>-14*****3</td>
+            <td>10 - Mestrado em Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Elisa</td>
+
+            <td>395*****-4</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve, nesse momento, é uma forma de parar as atividades normais da universidade e garantir tempo de debate, de estudo das pautas e propor soluções para os problemas que não são minoritários. É estabelecer prioridades. É garantir que não se perpetue condições excludentes e mediocres. É gerar consciencia de que as soluções e as decisões tem de ser coletivas e não individuais e de que só se forma um bom profissional com capacidade de reflexão.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Paula </td>
+
+            <td>499******-</td>
+            <td>13 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Eduarda </td>
+
+            <td>387******-</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luiz </td>
+
+            <td>395*****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>nderson </td>
+
+            <td>463*****-4</td>
+            <td>11 - Mestrado em Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;1) A pauta da greve é completamente irracional, pois não visa solução alguma para a questão orçamentária da universidade, ou realocação de recursos. &lt;br /&gt;2) A greve e ocupações que estão sendo realizadas são ilegais por diversos motivos.&lt;br /&gt;3) Os grupos  apenas estão interessados em responder a interesses póliticos-partidários, e não a pautas que beneficiem de fato os alunos e a universidade&lt;br /&gt;4) Uma das provas disso, é o fato de que há alunos que correm o risco de perderem bolsas e financiamentos, dada a praralização da reitoria.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Adriel </td>
+
+            <td>351*****-0</td>
+            <td>36 - Superior Tecn. Análise e Desenv.Sistemas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Isabela </td>
+
+            <td>472******-</td>
+            <td>19 - História</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Wellington </td>
+
+            <td>364*****-4</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Planejamento fraco dos organizadores, com a esperança que tudo vai mudar. As exatas não possuem professores bonzinhos igual os de humanas e biológicas.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Beatriz </td>
+
+            <td>39.***.***-</td>
+            <td>13 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ricardo </td>
+
+            <td>266*****-4</td>
+            <td>102 - Engenharia de Produção</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor </td>
+
+            <td>439*****-</td>
+            <td>100 - Ciências do Esporte</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Flavio </td>
+
+            <td>457*****-5</td>
+            <td>100 - Ciências do Esporte</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Roberto </td>
+
+            <td>527******-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Acauan </td>
+
+            <td>788*****-</td>
+            <td>3 - Mestrado em Ciência da Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não é o momento ideal para uma greve. Só trará malefícios, as pautas são pertinentes, porem temos que ser realistas, quando a situação financeira do estado e do país estiver mais favorável, as reivindicações serão mais viáveis. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Lhwan </td>
+
+            <td>383*****-7</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Eduardo </td>
+
+            <td>463*****-9</td>
+            <td>43 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Caique </td>
+
+            <td>160*******-</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Greve porra!&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Lucas </td>
+
+            <td>241****-1</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo </td>
+
+            <td>355*****-9</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Daniela </td>
+
+            <td>523******-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ignácio</td>
+
+            <td>50.***.***-5</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Angelo </td>
+
+            <td>509*****-</td>
+            <td>7 - Licenciatura em Letras - Português</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Felipe </td>
+
+            <td>387******-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro </td>
+
+            <td>420******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;As pautas são de interesse de toda a comunidade acadêmica e certamente devem ser amplamente discutidas pelos membros e associados da universidade, porém paralisar as atividades acadêmicas acabaria gerando mais malefícios do que benefícios, pois as pautas questionam problemas cuja solução é de médio e longo prazo, e isso poderia acarretar em um atraso ou má formação na educação universitária, levando profissionais defasados em sua área para o mercado de trabalho e a sociedade.&lt;br /&gt;Pautas como a melhoria e ampliação da moradia levam anos para serem aplicadas da maneira correta, a primeira mudança que deveria ser realizada seria na administração e melhoria na fiscalização e administração da moradia, evitando problemas como aqueles já relatados de excesso de pessoas em um único quarto e goteiras pelos quartos, problemas como esses vêm da má gestão do local. Uma possível ampliação da moradia poderia também passar esses problemas para o novo local. Portanto deve ocorrer um investimento em melhoria e ampliação da moradia que levaria vários anos para chegar no nível esperado.&lt;br /&gt;As cotas étnico-raciais e sociais também acredito serem pautas interessantes, mas que precisam de um investimento na educação pública básica em paralelo e conscientização pelo fim do preconceito racial, tentando ao menos aliviar a dívida histórica advinda da escravidão. Ou seja, as cotas são uma solução temporária para problemas que levam muito mais tempo e investimento em todos os níveis governamentais para serem resolvidos.&lt;br /&gt;Outra pauta discutida são os cortes ocorridos na universidade, infelizmente o voto para decidir os representantes da reitoria é tido como quase estamental, sendo um para professores, um para alunos e um para funcionários, enquanto que o número de alunos é muito maior que dos outros dois grupos. Esse é outra discussão, porém, a baixa arrecadação do ICMS pode facilmente ser resolvido com o dinheiro extra vindo de salários acima do salário do governador do estado de São Paulo, além das polêmicas duplas matrículas, que não deveriam existir no meio universitário. Essas problemas infelizmente levam longo tempo para se resolver devido a burocracia e ineficácia administrativa do governo.&lt;br /&gt;As pautas da greve estudantil não são ruins mas se levadas à sério, como todos esperam, levariam anos para serem atendidas, ocorrendo um prejuízo muito grande devido à paralisação das atividades acadêmicas. Acredito que instituições como centros acadêmicos e o DCE devem apontar para soluções de curto, médio e longo prazo de suas pautas e ver que as soluções definitivas são demoradas e demandam meses de reflexão e discussão e anos de ações para ocorrerem de maneira ampla. Por isso não creio que a paralisação da atividade acadêmica seja um bom caminho. Além disso vejo o uso de ferramentas como o piquete um desrespeito aos estudantes, professores e trabalhadores que desejam fazer suas atividades de maneira normal e cotidiana. Uma outra questão delicada é a de que pensando de uma maneira macroscópica são os trabalhadores, ou pagadores de impostos, do estado de São Paulo que investem todo mês, de acordo com pesquisas da USP, o equivalente à 3 mil reais por mês para cada aluno da UNICAMP ou USP, sendo esse investimento vindo de impostos que pagam a mensalidade da universidade. Sendo portanto necessário pensar se a paralisação dos estudantes de escola pública não significaria um desrespeito às pessoas que pagam impostos, e portanto, pagam a mensalidade para que possamos estudar em uma universidade de qualidade.&lt;br /&gt;Essa justificativa não é definitiva e pode sofrer mudanças de acordo com argumentos novos e aprecia boas discussões de ideias, um meio universitário é aquele que muda constantemente, flui, através de pesquisas, estudos e trabalhos que visam melhorias tanto para a sociedade como individuais e para a própria universidade, sendo possível ocorreram discussões para melhorias nesses âmbitos durante os exercícios rotineiros acadêmicos. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>bora </td>
+
+            <td>367*****-7</td>
+            <td>53 - Geologia</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Vladmir </td>
+
+            <td>463*****-9</td>
+            <td>1 - Mestrado em Matemática</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael </td>
+
+            <td>443******-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus </td>
+
+            <td>507*****-</td>
+            <td>40 - Licenciatura em Física</td>
+            <td>Abstenção</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Apesar da legitimidade das pautas acredito que a greve em si é um mecanismo arcaico e que não vai ao cerne da questão. Greve de alunos destacados de seus professores e pares é uma abstração bizarra da realidade. O estudante da UNICAMP não deve em hipótese alguma levantar uma bandeira tão séria de classe sem a devida reflexão ética e política do que está em questão nesse acirramento. Trocando em miúdos: os professores não são nossos inimigos e a greve - que visa lesar o &amp;quot;patrão&amp;quot; - não cabe na realidade da interação mestre/aluno. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>344******-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael </td>
+
+            <td>495******-</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Eduardo </td>
+
+            <td>373*****-8</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Thiago </td>
+
+            <td>395*****-3</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luiz </td>
+
+            <td>3.2**.***-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>cius </td>
+
+            <td>468*****-9</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Arthur </td>
+
+            <td>369*****-6</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Tenho consciência que alguns meses de atraso no meu estudo não sai mais importantes que as pautas da greve.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Alef </td>
+
+            <td>469******-</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro </td>
+
+            <td>001******-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bianca </td>
+
+            <td>499******-</td>
+            <td>45 - Educação Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme </td>
+
+            <td>180****-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lukas</td>
+
+            <td>357****-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo</td>
+
+            <td>586*****-8</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fernanda</td>
+
+            <td>499*****-0</td>
+            <td>29 - Licenciatura em Matemática</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marcel</td>
+
+            <td>479*****-1</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Barbara</td>
+
+            <td>-15*****8</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Apoio as pautas da greve, tanto as referentes a toda Unicamp como as referentes a engenharia mecânica e acredito que esta é a melhor forma de pressionar e cobrar mudanças efetivas, uma vez que a via do diálogo já foi tentada, tanto no que se refere a FEM como a reitoria. Também quero que a greve acabe logo, para isso, espero que possamos negociar e conquistar as mudanças que precisamos na universidade.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Augusto</td>
+
+            <td>368*****-4</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;De fato estamos estamos enfrentando dificuldades no orçamento da Unicamp, e até concordo com algumas paltas levantadas a favor da greve (Corte de supersalários, fim de duplas matrículas e ampliação das moradias). O problema é que uma greve não vai mudar o posicionamento dos que estão no poder de decisão nesse caso. Concordo com a ocupação da reitoria, mas impedir que aulas sejam ministradas é um disperdício dos recursos escassos da faculdade, e só gera antipatia entre os dois lados da discussão.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Ramonita</td>
+
+            <td>495*****-6</td>
+            <td>43 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Greve para mim não é a melhor forma de resolver os problemas que a universidade enfrenta atualmente&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Evandro</td>
+
+            <td>463*****-6</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Amanda</td>
+
+            <td>398******-</td>
+            <td>22 - Música</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Artur</td>
+
+            <td>437******-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>484*****-2</td>
+            <td>10 - Mestrado em Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Aline</td>
+
+            <td>533*****-9</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>381*****-1</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>382******-</td>
+            <td>44 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>379*****-6</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Igor</td>
+
+            <td>497*****-6</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bruno</td>
+
+            <td>337*****-3</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Apesar de algumas causas serem justas, a motivação politica é totalmente errada e enfraquece os estudantes perante a reitoria e a sociedade&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Alex</td>
+
+            <td>495*****-2</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Arthur</td>
+
+            <td>499******-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Na minha opinião, qualquer greve tem interesse político. Mesmo que muitas delas comecem espontaneamente, acabam que sendo &amp;quot;apadrinhadas&amp;quot; por grupos e/ou partidos políticos. Esse já é um motivo suficiente para desconfiar de qualquer mobilização desse tipo, visto que desacredito em políticos e seus mais diversos movimentos. Essa é uma constatação minha e o motivo dela é experiência/pesquisa própria. Acho muito justo brigar por ampliação de moradias e mais transparência na administração, mas o que me chama a atenção é: por que só agora o DCE percebeu isso? Desde a sua inauguração, em 1989 a moradia esta defasada em relação as vagas. Por que nesses quase 30 anos não houve tanto ânimo como agora para a sua ampliação? Será mesmo que com a economia indo mal como agora, vai ter um interesse da Unicamp em arrumar mais um gasto? Como já dito, concordo com as pautas, mas acho que perdemos o timing para essas reivindicações.  &lt;br /&gt;Outro ponto, no Brasil estudar é um privilégio. Estudar na Unicamp é um privilégio maior ainda. Uma greve de estudantes iria causar problemas para quem? Não é como operários de uma fábrica que se param causam prejuízos financeiros para a empresa. Estudantes param de estudar e quem se dá mal são os mesmos. Professores ficam irritados e continuam recebendo seus salários. Funcionários da DAC ficam irritados por terem de refazer calendários e seus salários continuam caindo ao final/começo do mês. Funcionários com super salários ficam irritados mas continuam com seus super salários. O estudante não tem salário (a menos que seja bolsista) irrita todo mundo e ainda por cima não assiste as aulas. A reputação dos estudantes da Unicamp acaba caindo por conta disso. &lt;br /&gt;Ao meu ver essa manifestação tem interesse político por trás pois veio num momento oportuno para políticos e seus movimentos, visto que esse ano têm eleições, passamos por crise política e as pessoas estão muito revoltadas e querendo virar desesperadamente politizadas. Admiro as pessoas  que apoiam o movimento por questões de simpatia ao próximo, mas não confio em movimentos que eu desconfio serem políticos.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo</td>
+
+            <td>471*****-8</td>
+            <td>1 - Matemática</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>337*****-8</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Franciane</td>
+
+            <td>395******-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A maneira como a greve estudantil está sendo conduzida só tem causado transtornos para alunos e professores que estão tentando manter as atividades acadêmicas pois os grevistas, de maneiras autoritária, têm impedido a realização de aulas e provas. Sendo assim, a liberdade individual é gravemente desrespeitada.&lt;br /&gt;Além disso, a motivação para essa greve é apenas política. O momento turbulento pelo qual o país está passando tem deixado alguns grupos descontentes e, como dizer para todo mundo que esse é o motivo da greve não daria muito certo, começaram a usar as famosas pautas da moradia e dos cortes.&lt;br /&gt;Se a moradia já devia ter sido ampliada há muito tempo, por que não fizeram essas reivindicações quando a situação econômica era mais favorável para realizar essa ampliação? Por que agora, nesse momento de crise e diminuição da arrecadação que é repassada para a Unicamp?&lt;br /&gt;A universidade é um lugar onde todos devem ter suas opiniões respeitadas e não é isso o que está acontecendo. Os alunos que conseguem passar pelos piquetes e participar das aulas estão sendo perseguidos e ofendidos, alguns professores estão sendo ameaçados, criou-se um clima pesado e de violência dentro do campus que sempre foi muito acolhedor. A situação é lamentável e precisa ser mudada.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Daniela</td>
+
+            <td>502*****-1</td>
+            <td>39 - Engenharia Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mateus</td>
+
+            <td>397*****-2</td>
+            <td>108 - Engenharia Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Denise</td>
+
+            <td>54.***.***-4</td>
+            <td>44 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>584******-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo</td>
+
+            <td>445******-</td>
+            <td>44 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Clara</td>
+
+            <td>550*****-1</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve não resolve nada, o mundo está péssimo em vários sentidos, não é piquetando as salas que os alunos irão se esforçar para ir nas reuniões, pois muitos estão em suas cidades aproveitando o fato de que não está tendo aula. Não é ocupando a reitoria que as autoridades irão se compadecer da Unicamp e irão dar mais verbas ou investir na moradia. O dever de cada um é ser uma pessoa boa, o que sobra no mundo é a hipocrisia: pessoas reivindicando melhores posturas daqueles que estão acima delas, mas jogando lixo no chão, brigando com os amigos, faltando das aulas por mera preguiça. Quando cada um que faz greve sentir que já fez de tudo para tentar melhorar o mundo e só restar a greve para mudar o ambiente universitário,  por exemplo, ai eu apoiarei a greve. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Igor</td>
+
+            <td>369*****-3</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Tiago</td>
+
+            <td>534******-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Henrique</td>
+
+            <td>358*****-0</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Isso é coisa de partido político de esquerda e não tem representatividade alguma.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Ana</td>
+
+            <td>406*****-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Renan</td>
+
+            <td>466*****-7</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Edson</td>
+
+            <td>446*****-0</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Daniel</td>
+
+            <td>585*****-5</td>
+            <td>18 - Linguística</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Por cotas reais, ampliação do quadro de professores, que afeta ensino, pesquisa e extensão e ampliação da moradia, ou, no mínimo, o cumprimento do que a reitoria se dispôs a fazer quando a construiu (pressionada por uma ocupação, aliás).&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Marina</td>
+
+            <td>533****-</td>
+            <td>10 - Mestrado em Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Tatiane</td>
+
+            <td>412*****-2</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ana</td>
+
+            <td>480*****-8</td>
+            <td>62 - Mestr. em Genética e Biologia Molecular</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ricardo</td>
+
+            <td>-51****7</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A Unicamp já busca encontrar um equilíbrio entre sua função social, inclusiva, e sua função educacional, cultural e científica, de disponibilizar ensino de ponta em um país onde ele é desesperadamente ausente. As pauas apenas puxam, indiscriminadamente, o equilíbrio para o lado da inclusão, ignorando os direitos individuais e os intereses nacionais.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Caio</td>
+
+            <td>49.***.***-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Henrique</td>
+
+            <td>442******-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Carolina</td>
+
+            <td>379*****-2</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Krismann</td>
+
+            <td>379******-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Douglas</td>
+
+            <td>491*****-5</td>
+            <td>75 - Estudos Literários</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Porque as pautas solicitadas são totalmente válidas e o número de alunos/funcionários/professores que deliberou pela greve é bastante representativo.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Bruno</td>
+
+            <td>588*****-4</td>
+            <td>57 - Doutorado em Teoria e História Literária</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Juan</td>
+
+            <td>891***-</td>
+            <td>61 - Doutorado em Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mariana</td>
+
+            <td>455*****-6</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Angelo</td>
+
+            <td>8.9**.***-3</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor</td>
+
+            <td>503*****-1</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Voto a favor da greve na minha faculdade porque acredito que há muito a ser melhorado, tanto na infraestrutura como na qualidade das aulas. Os poucos bons professores merecem ser reconhecidos de tal forma que os ruins passem a querer melhorar. Quanto às pautas em comum com o movimento geral, individualmente cobro apenas que a minha faculdade tome uma posição.&lt;br /&gt;Entendo que a greve traz muitos problemas (quase votei contra) e torço muito para que o diálogo com a diretoria aconteça logo de forma que voltemos a ter aulas o quanto antes.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Fernando</td>
+
+            <td>496*****-5</td>
+            <td>3 - Mestrado em Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Danilo</td>
+
+            <td>401*****-4</td>
+            <td>8 - Engenharia Agrícola</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Greve política jamais!&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Cristiane</td>
+
+            <td>546*****-9</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus</td>
+
+            <td>395*****-1</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Raoni</td>
+
+            <td>200**********-</td>
+            <td>11 - Mestrado em Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Caique</td>
+
+            <td>420*****-7</td>
+            <td>8 - Engenharia Agrícola</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Cristiane</td>
+
+            <td>484*****-7</td>
+            <td>8 - Engenharia Agrícola</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>419*****-5</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Historicamente a GREVE é uma forma de pressão que trouxe muitas conquistas para a Unicamp e outras universidades, ela é usada como último recurso do movimento estudantil para forçar a abertura de diálogo e negociação, que antes era totalmente NEGADO, ao contrário do que muitos pensam, outras diversas formas foram tentadas como CONSU e CCG para conseguir as nossas pautas históricas como ampliação da moradia e cotas por renda e étnico raciais. O movimento estudantil que luta hoje por essas conquistas, é o mesmo que luta por educação pública de qualidade, e, ao contrário do que dizem, não nos abstivemos da luta pela educação pública NUNCA, muito pelo contrário, sempre estive na rua lutando por direitos, enquanto nunca vi ninguém que esta contra a greve la comigo. Só não ve quem não quer. Se não fosse pelo movimento estudantil essa universidade seria assim: Bandejão 8 reais (no mínimo), sem circular externo noturno, sem RS, sem moradia, sem festas, sem segurança, sem iluminação, jubilação por CP ainda estaria vigente, todos os RAs teriam bandeirinha santander (mesmo ele não pagando nada para a Unicamp, apenas o preço do cartão), não teria bandejão no café da manhã, PAGARÍAMOS MENSALIDADE (sim isso ja foi proposto), isso para não me estender muito. Então quem é contra greve e for no bandeco pensa que só paga 2 reais por causa de gente grevista e piqueteira, quando for pegar o onibus circular noturno também, quando receber as contas de fim de mês e lá não estiver constando UNICAMP, também lembre disso. O movimento é por COTAS, PERMANÊNCIA, TRANSPARÊNCIA, SUSPENSÃO E REAVALIAÇÃO DOS CORTES JUNTO A COMUNIDADE ACADÊMICA. Não é um movimento partidário quando 99% das pessoas que participam não são filiadas a nenhum partido, e não tem lideranças   mas sim uma horizontalidade bem expressiva. Quer saber como é? Participe UM DIA das atividades de greve do seu curso e converse com seus colegas. Quem quer argumentar com base e debater vem para o debate, quem não tem argumento FOGE e se esconde atrás de um computador, pois sabe que não consegue aguentar 20 min de questionamentos, ninguém bate e nem hostiliza ninguém não, uma coisa que a mídia não falha é em tentar deslegitimar nosso movimento, e se isso acontecesse, ja teria sido divulgado não acham? então medo pra que? receio pra que? vem discutir, vem debater. Beijos&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Luis</td>
+
+            <td>545*****-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Jose</td>
+
+            <td>389*****-</td>
+            <td>40 - Licenciatura em Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Stephanie</td>
+
+            <td>488*****-1</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mariana</td>
+
+            <td>488*****-6</td>
+            <td>75 - Estudos Literários</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Natali</td>
+
+            <td>-15*****3</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não vai resolver nada e vai atrasar o curso de todo mundo. E mais: aluno não faz greve pois nao recebe salário, não é profissão. Essas paralisações podem ser necessárias pra incentivar discussões, mas não são legítimas. De todo modo, atrapalha mais do que ajuda.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Lorenzo</td>
+
+            <td>486*****-2</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael</td>
+
+            <td>362*****-4</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fernando</td>
+
+            <td>467*****-6</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Kauan</td>
+
+            <td>377******-</td>
+            <td>2 - Estatística</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Daniel</td>
+
+            <td>385*****-9</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marcelo</td>
+
+            <td>130*******-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Scott</td>
+
+            <td>41.***.***-</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ivan</td>
+
+            <td>328*****-</td>
+            <td>78 - Doutorado em Educação Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Enquanto não houver flexibilização das pautas nesse grave momento econômico do país , tiver interferências e base de grupos políticos (os quais tem outros objetivos e não a meta de melhora e bem da universidade) e houver violência, truculência e piquetes, sou absolutamente contra esta greve.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Tiago</td>
+
+            <td>405*****-4</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luciano</td>
+
+            <td>200*******-6</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lais</td>
+
+            <td>482*****-8</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Raphael</td>
+
+            <td>416*****-5</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Júlia</td>
+
+            <td>389******-</td>
+            <td>45 - Educação Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Alexandre</td>
+
+            <td>211*****-6</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>372*****-8</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Supersalários: Não podem ser cortados de acordo com a lei, mas já estão congelados. &lt;br /&gt;Cotas: Veja o PAAIS de 2016, a nova metodologia consegue atingir a inclusão racial. Compare o número de candidatos brancos e negros que se increvem e que se matriculam e também com a proporção no estado de São Paulo.&lt;br /&gt;Bolsas: A reitoria não vai cortar bolsas:&lt;br /&gt;Cortes: Não tem dinheiro já que cortar supersalários não é opção&lt;br /&gt;Moradia: A reitoria já apresentou novo projeto já com matrícula para ampliação. &lt;br /&gt;&lt;br /&gt;ESTA GREVE É INÚTIL! O DCE só não apoia a desocupação pois ficará claro que eles agem por impulso nas assembleias e nem sabem como a situação financeira e judicial funciona direito.  &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Marcel</td>
+
+            <td>-10*****3</td>
+            <td>45 - Educação Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Enrico</td>
+
+            <td>528*****-5</td>
+            <td>27 - Educação Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Ideia politicos&lt;br /&gt;Ideais sem fundamento.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Diana</td>
+
+            <td>485*****-0</td>
+            <td>75 - Estudos Literários</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Elena</td>
+
+            <td>377******-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lia</td>
+
+            <td>477*****-3</td>
+            <td>55 - Doutorado em Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>486*****-</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve está com forte indícios de manipulação por grupos políticos.  Utilizam de mobilizações estudantis como objeto de barganha.&lt;br /&gt;Além do mais os alunos sempre são prejudicados, perdendo semestre ou tendo aulas mal repostas.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Marcus</td>
+
+            <td>171*****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>366******-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Igor</td>
+
+            <td>368******-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme</td>
+
+            <td>437******-</td>
+            <td>22 - Música</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Henrique</td>
+
+            <td>537*****-0</td>
+            <td>27 - Educação Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bianca</td>
+
+            <td>41.***.***-4</td>
+            <td>22 - Música</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Pq sou contra a precarização e a privatização das Universidades Públicas&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Artur</td>
+
+            <td>38.***.***-5</td>
+            <td>64 - Comunicação Social - Midialogia</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor</td>
+
+            <td>330******-</td>
+            <td>40 - Licenciatura em Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Henrique</td>
+
+            <td>488*****-9</td>
+            <td>55 - Geografia</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Educação de qualidade não se constroi pensando apenas individualmente. Qual o papel que a profissão exige do profissional? Será que são emprego e vida boa?&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Davi</td>
+
+            <td>367******-</td>
+            <td>40 - Licenciatura em Física</td>
+            <td>Abstenção</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Estou em dúvida se a greve é essencial para tantas pautas. Talvez se focasse em somente, por exemplo, na permanência, poderia sim ser viável, e utilizar a questão etnicaraciais e etc como argumentação, mas colocar muitas pautas para se discutir, fica complicado negociar.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Pedro</td>
+
+            <td>369*****-8</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Augusto</td>
+
+            <td>403*****-3</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Allex</td>
+
+            <td>410*****-</td>
+            <td>40 - Licenciatura em Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rai</td>
+
+            <td>489*****-1</td>
+            <td>40 - Licenciatura em Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fernando</td>
+
+            <td>501*****-2</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;&amp;quot;§ 3º As manifestações e atos de persuasão utilizados pelos grevistas não poderão impedir o acesso ao trabalho&amp;quot; LEI Nº 7.783, DE 28 DE JUNHO DE 1989. Além de os piquetes serem eticamente errados, são um ato anti-democrático, explicitamente proibidos pela constituição brasileira. Impede-se fisicamente a liberdade dos estudantes e dos professores de exercerem suas funções, caso discordem da greve. Desse modo, nem mesmo maioria nas assembleias dão (nem constitucionalmente nem moralmente) legitimidade para a realização de piquetes. Desse modo, inicio minha justificativa afirmando que os meios utilizados pelos organizadores da greve são atos ilegais, imorais, antiéticos e anti-democráticos, que ferem os direitos (garantidos pela constituição) de acesso à educação e de trabalho, ferindo os direitos individuais dos alunos que se opõem e impondo a greve à eles.&lt;br /&gt;Por outro lado, critico à organização da greve por outros motivos. Por toda a Unicamp, por exemplo, tais alunos (e partidos políticos) espalharam cartazes como o intitulado &amp;quot;porque a ocupação da reitoria é legítima&amp;quot;. Para não entrar em detalhes sobre esse caso, visto que a maioria por aqui talvez não se recorde, vou resumir o ocorrido afirmando que, nesse cartaz, houve uma clara e grosseira manipulação de informação. Isso esclarece aos alunos o real caráter dos organizadores. (Se quiser saber mais sobre esse caso, tal cartaz encontra-se, dentre outros lugares, no PB e a cláusula omitida foi a enumerada terceira).&lt;br /&gt;No entanto, greve sem piquete é legítima. Mas ainda assim tenho motivos para discordar dela. Sou à favor das cotas, porém discordo do que a greve propõem. Acho que cotas têm que ser por renda, e só por renda. Acho que todos os pobres devem ter as mesmas possibilidades de ascensão social, independentemente da raça ou qualquer outra coisa. Por outro lado, ricos que estudam em escola pública (como o cotuca) não deveriam ser cotistas.&lt;br /&gt;Quanto às moradias, acho que é uma vergonha a unicamp ter se comprometido a construir 1500 vagas e, 30 anos depois, ainda não ter comprido. Entretanto, tivemos 30 anos para cobrar que fossem construídas e não cobramos, e hoje estamos na maior crise da nossa histórica, com o orçamento despencando. Portanto, acho que as moradias devem SIM ser construídas, mas em um momento futuro, quando isso for possível. É inegável, ainda assim, que há um grande interesse, por parte dos partidos políticos envolvidos na greve, em adotar um discurso em prol das causas listadas visando causar tumulto no ambiente universitário e indignação com o governo por conta dos cortes de gastos (apesar de o governador não ter nada a ver com isso). E tumultos na Unicamp são prejudiciais a nós, alunos.&lt;br /&gt;Outros motivos já foram comentados, e compartilho-os.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Augusto</td>
+
+            <td>550****-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Eu não sou a favor da greve, e também não a favor dos piquetes. Mas eu entendo o que cada um deles tenta resolver e não consigo pensar numa solução melhor para isso.&lt;br /&gt;&lt;br /&gt;A greve atende a uma pressão que está sendo feita sobre a reitoria com relação às principais pautas levantadas. Não concordo com ela, mas esgotado os recursos possíveis talvez ela tenha sido a opção que sobrou. Mas ao mesmo tempo admito não saber como anda a ocupação da reitoria, e não sei o quão viável está sendo mantê-la. &lt;br /&gt;O piquete que está sendo feito é uma ferramenta de opressão violenta do ponto de vista dos professores e de boa parte dos alunos. Ele está sendo usado por um único motivo: proteger os alunos que estão de greve, pois prosseguindo as atividades normais da faculdade tais alunos sofrerão consequências comparado com quem não aderiu. Essa é a parte feia do negócio, pois quando se aplica violência contra a liberdade de se aderir ou não a greve, acaba-se estabelecendo uma imagem política ruim com todos. Pra mim, a greve deveria continuar, mas todos os piquetes deveriam parar. Esse direito que os piquetes tentam garantir pode ser expressado com um diálogo diretamente com os professores, e acionando-se mecanismos legais contra os professores que tentarem punir alunos que estão contra a greve assim como possível. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Viviane</td>
+
+            <td>527******-</td>
+            <td>2 - Estatística</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Patricia</td>
+
+            <td>291*****-3</td>
+            <td>15 - Medicina</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Filipe</td>
+
+            <td>424*****-3</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Thiago</td>
+
+            <td>468*****-5</td>
+            <td>61 - Doutorado em Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luidy</td>
+
+            <td>397*****-6</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Nara</td>
+
+            <td>493*****-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Livia</td>
+
+            <td>373******-</td>
+            <td>75 - Estudos Literários</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rodrigo</td>
+
+            <td>470*****-3</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Felipe</td>
+
+            <td>361******-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ygor</td>
+
+            <td>428*****-8</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rodrigo</td>
+
+            <td>367*****-9</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus</td>
+
+            <td>495*****-3</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Forma eficiente de reivindicar.&lt;br /&gt;apesar disso, entendo que não se resolve tudo na greve, como no caso de se realmente na situação financeira atual, as demandas fossem impossiveis. Porem não é esse meu entendimento.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Leticia</td>
+
+            <td>50.***.***-0</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Isadora</td>
+
+            <td>342****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Concordo com (quase) todas as reivindicações. Entretanto, acho que as propostas de resolução das pautas atualmente não são concretas ou viáveis e não serão resolvidas com uma greve.&lt;br /&gt;Não podemos pressionar a Unicamp para gastar o fundo de emergência. Não temos como pressionar o reitor para aumentar magicamente o ICMS, um fator que depende do estado (ou vocês realmente acham que estamos pressionando Alckmin?). O problema dos supersalários é sim um problema, mas acredito que o âmbito de resolução seja mais complexo do que: 4 milhões em super salários + fim do super salário = 64 milhões a mais por ano! Por outro lado, sou completamente a favor de reivindicar mais transparência nas contas e o fim das matrículas duplas, que é ilegal.&lt;br /&gt;Acredito que há outras formar de agir além de se abster de aulas (ou obrigar as pessoas a se abster de aulas, dado que discordo _bastante_ do piquete), diante de um contexto de crise que o Brasil se encontra. Não acredito em &amp;quot;golpe&amp;quot;, mas em um governo doente e que reflete a situação atual do Brasil, em que os próprios motivos egoístas são levados acima de tudo. O governo atual me envergonha, de verdade, ele está travestido de hipocrisia e manipulação das leis ao que bem entender. Entretanto, o processo de impeachment ocorreu segundo os conformes da constituição - não houve &amp;quot;burlamento&amp;quot;... Burlamento é obrigar todos os alunos participarem de assembleias para terem seu voto legitimado. Não me entendam errado, acredito nas assembleias, apenas não acredito em nada que fere a liberdade das pessoas.&lt;br /&gt;Não voto por egoísmo ou individualismo. Voto porque não acredito na greve. Qualquer atividade extra que envolva atos de construção social ou que realmente vá trazer resultados de forma proativa eu concordo em fazer parte (assim como já fiz).&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Alessandra</td>
+
+            <td>-17*****0</td>
+            <td>29 - Licenciatura em Matemática</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Maycon</td>
+
+            <td>916****-6</td>
+            <td>53 - Doutorado em Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus</td>
+
+            <td>378*****-3</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bruno</td>
+
+            <td>545******-</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Interesses da comunidade prevalecem interesses pessoais&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Arthur</td>
+
+            <td>300*****-1</td>
+            <td>66 - Doutorado em Ciências Sociais</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro</td>
+
+            <td>535*****-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pietro</td>
+
+            <td>389*****-4</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Eu acredito que há outras maneiras de fazer reivindicações, não sendo necessária a realização de greve&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>William</td>
+
+            <td>384*****-6</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Camila</td>
+
+            <td>451******-</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Willian</td>
+
+            <td>37.***.***-1</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor</td>
+
+            <td>505******-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro</td>
+
+            <td>489******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Henrique</td>
+
+            <td>359*****-5</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Priscila</td>
+
+            <td>495*****-6</td>
+            <td>56 - Licenciatura Integrada Química/Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Compartilho, em maior parte, da opinião dos colegas que aqui justificaram seu voto contra a greve. O que chama atenção é que, até o momento, as decisões atuais não são o desejo da maioria da comunidade acadêmica, mas sim da maioria (que pode estar) presente em assembleia. Espero imensamente que colocar opiniões neste site não se torne um &amp;quot;joguinho&amp;quot; para convencer um ou outro a mudar de lado mas sim uma forma válida de decidir os próximos passos.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Henrique</td>
+
+            <td>384******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Yuri</td>
+
+            <td>367*****-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Daniel</td>
+
+            <td>119*******-</td>
+            <td>9 - Engenharia Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Augusto</td>
+
+            <td>377*****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael</td>
+
+            <td>496*****-6</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Cortes e contingenciamentos seletivos não podem ser tolerados. Se tem que tirar dinheiro, que seja dos mimos de quem não precisa (vide as refeições chiques do CONSU e outras regalias).&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Giovana</td>
+
+            <td>498******-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Émerson</td>
+
+            <td>532*****-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Isadora</td>
+
+            <td>397*****-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Henrique</td>
+
+            <td>495*****-0</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Greve de estudantes não funciona.... e movimento se perder nas suas bandeiras...&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Livia</td>
+
+            <td>477*****-6</td>
+            <td>39 - Engenharia Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Allana</td>
+
+            <td>502******-</td>
+            <td>56 - Licenciatura Integrada Química/Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mariana</td>
+
+            <td>-17.***.**9</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ana</td>
+
+            <td>531*****-</td>
+            <td>13 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não vejo sentido na manifestação porque acredito que não possui uma meta definida. Vejo que muitas pessoas apoiam sem mesmo saber porquê, só porque apoiam em senso comum que haja quotas para negros na universidade, que a moradia deveria ser maior, etc, mas na verdade esses assuntos surgiram depois de começar o movimento. A verdade é que todo mundo tá &amp;quot;greveando&amp;quot; simplesmente pelo calor do momento e não vejo as causas como plausíveis para tanto. De resto, a hipocrisia me irrita muito.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Raquel</td>
+
+            <td>368*****-7</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Daniel</td>
+
+            <td>465*****-3</td>
+            <td>11 - Dout. em Genética e Biologia Molecular</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro</td>
+
+            <td>200**********-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gesiel</td>
+
+            <td>488*****-3</td>
+            <td>4 - Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Kaique</td>
+
+            <td>375******-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Thiago</td>
+
+            <td>41.***.***-0</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Douglas</td>
+
+            <td>483****-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>João</td>
+
+            <td>487*****-9</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor</td>
+
+            <td>106****-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Igor</td>
+
+            <td>435*****-6</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Paula</td>
+
+            <td>478*****-9</td>
+            <td>4 - Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>485*****-4</td>
+            <td>15 - Medicina</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não acredito que as pautas da greve estão bem elaboradas, não concordo com a ideia de greve estudantil como método de pressionar a reitoria. Acredito que deveria haver um dialogo mais amplo com as instituições da Unicamp e que os estudantes deveriam utilizar-se dos meios institucionais, antes de pensar em alternativas e ocupações, como o CONSU e órgãos deliberativos das faculdades e institutos. Finalmente discordo do método como o DCE toma suas decisões através de longas assembleias, acredito que as decisões deveriam ser descentralizadas aos CAs e repassadas por representatividade ao DCE.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Ana</td>
+
+            <td>489*****-1</td>
+            <td>43 - Engenharia de Alimentos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marina</td>
+
+            <td>375*****-8</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luis</td>
+
+            <td>527******-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Acredito que as propostas do movimento sejam pertinentes e que tenham real importância para os estudantes. No entanto, acredito que a greve é uma medida extrema, feita em um momento não muito propício devido a ser um período prévio a troca de reitor e acredito que trará mais prejuízos que benefícios aos alunos. Por tanto, acredito que hajam formas menos custosas, porém menos efetivas, mas que sejam capazes de transformar tais reinvindicações  em realidade.  &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Bolívar</td>
+
+            <td>400*****-0</td>
+            <td>8 - Engenharia Agrícola</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;O custo de manutenção dos alunos mensalmente é muito elevado, mesmo para universidades públicas, acredito que greve é um recurso crítico para ser realizado em ultima instância e não como hobbie como é encarado por muitos.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Laísa</td>
+
+            <td>544*****-7</td>
+            <td>48 - Arquitetura e Urbanismo</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rodrigo</td>
+
+            <td>401*****-0</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Violação dos seguintes artigos da constituição.&lt;br /&gt;&lt;br /&gt;Art. 5°, inciso II: ninguém será obrigado a fazer ou deixar de fazer alguma coisa senão em virtude de lei;&lt;br /&gt;Inciso IV: é livre a manifestação do pensamento, sendo vedado o anonimato;&lt;br /&gt;Art.° 65: Pichar ou por outro meio conspurcar edificação ou monumento urbano (é permitido, em caso de edifício público, apenas com autorização do órgão competente).&lt;br /&gt;Art. 331°: Desacatar funcionário público no exercício da função ou em razão dela.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Além disso, há alunos empurrando professores (quase fazendo cair da escada).&lt;br /&gt;A assembléia que dizem ser estatutária não representa os estudantes e funcionários, já que nem todos podem comparecer e a votação e feita de forma pouco confiável (é preferível que façam a votação por urna ao longo da semana).&lt;br /&gt;Há quem alegue que o piquete não foi votado em assembléia e que a greve sim é que foi votada.&lt;br /&gt;A eficiência da greve é questionável. Esta prejudicando muito mais os alunos do que qualquer um dos responsáveis. A ocupação da reitoria já é o suficiente. Se essa ocupação não estiver funcionando, não vejo motivos para prejudicar os alunos bloqueando as salas de aula (violando artigos já citados da constituição).&lt;br /&gt;&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Marina</td>
+
+            <td>421*****-</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Larissa</td>
+
+            <td>384*****-2</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Raissa</td>
+
+            <td>546******-</td>
+            <td>19 - História</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Barbara</td>
+
+            <td>408*****-1</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fabiana</td>
+
+            <td>427*****-3</td>
+            <td>53 - Geologia</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Sou contra a greve de alunos, pois apenas os alunos serão prejudicados. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Júlia</td>
+
+            <td>336*****-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Carolina</td>
+
+            <td>58.***.***-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Patricia</td>
+
+            <td>368*****-5</td>
+            <td>22 - Música</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mariana</td>
+
+            <td>401*****-0</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Jade</td>
+
+            <td>369*****-</td>
+            <td>27 - Educação Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>399*****-8</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Todos tem o direito de não serem agredidos é o dever de não agredir. O piquete viola esse direito, ao impedir a livre movimentação dentro do espaço da universidade. Essa ação imoral não é legitimada pela democracia, pois o que é errado é errado mesmo se a maioria for a favor.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Daví</td>
+
+            <td>488*****-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Taynan</td>
+
+            <td>409*****-2</td>
+            <td>2 - Estatística</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor</td>
+
+            <td>227****-</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Erika</td>
+
+            <td>286*****-6</td>
+            <td>70 - Doutorado em Educação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Robison</td>
+
+            <td>810*******-</td>
+            <td>98 - Doutorado em Ciências e Engª de Petróleo</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leandro</td>
+
+            <td>384******-</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Francisco</td>
+
+            <td>200**********-</td>
+            <td>54 - Doutorado em Física</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Nícolas</td>
+
+            <td>386*****-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Natalia</td>
+
+            <td>469******-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Tomás</td>
+
+            <td>389*****-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme</td>
+
+            <td>368*****-8</td>
+            <td>109 - Administração</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Andressa</td>
+
+            <td>200*******-6</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Murilo</td>
+
+            <td>437*****-</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Tamilyn</td>
+
+            <td>381*****-7</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Danilo</td>
+
+            <td>240****-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não acho que seja o mecanismo correto para fazer as reivindicações. Deveria se tentar uma alternativa diplomática.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Felipe</td>
+
+            <td>126*****-2</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Josué</td>
+
+            <td>489*****-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>José</td>
+
+            <td>536******-</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>André</td>
+
+            <td>522******-</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bruno</td>
+
+            <td>-14*****7</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Laís</td>
+
+            <td>441*****-</td>
+            <td>40 - Mestrado em Linguística Aplicada</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo</td>
+
+            <td>395******-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marcelo</td>
+
+            <td>36.***.***-1</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Érika</td>
+
+            <td>489*****-4</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rodrigo</td>
+
+            <td>492*****-2</td>
+            <td>39 - Engenharia Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bárbara</td>
+
+            <td>503*****-4</td>
+            <td>8 - Engenharia Agrícola</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>144*****-*3</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Izabella</td>
+
+            <td>360******-</td>
+            <td>64 - Comunicação Social - Midialogia</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael</td>
+
+            <td>352*****-6</td>
+            <td>53 - Doutorado em Ciência da Computação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Concordo com as pautas, mas a greve de estudantes não é compatível com o funcionamento da pós-graduação. Não dá para pararmos da mesma forma como a graduação sem deixar de honrar os compromissos relacionados a nossas bolsas.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Daniel</td>
+
+            <td>484*****-3</td>
+            <td>1 - Matemática</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ana</td>
+
+            <td>421*****-3</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Heloisa</td>
+
+            <td>425*****-4</td>
+            <td>8 - Engenharia Agrícola</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marcelo</td>
+
+            <td>537******-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Júlia</td>
+
+            <td>540******-</td>
+            <td>18 - Linguística</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael</td>
+
+            <td>398******-</td>
+            <td>39 - Engenharia Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Felipe</td>
+
+            <td>437*****-1</td>
+            <td>42 - Ciência da Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Johnatan</td>
+
+            <td>468*****-6</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo</td>
+
+            <td>338********-</td>
+            <td>22 - Música</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Eu voto a favor da greve por contra da falta de políticas de permanência estudantil e por acreditar que o corte seja um grande problema para continuação da universidade pública.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Giani</td>
+
+            <td>293*****-7</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Isabela</td>
+
+            <td>394*****-1</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ricardo</td>
+
+            <td>484*****-9</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Daniel</td>
+
+            <td>508******-</td>
+            <td>39 - Engenharia Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Joel</td>
+
+            <td>128*****-4</td>
+            <td>9 - Engenharia Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme</td>
+
+            <td>366******-</td>
+            <td>27 - Educação Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A grande quantidade de pautas defendidas pela greve fez com que a real luta se perdesse em meio a tantas exigências. Se ser a favor da greve significa apoiar todas essas exigências, sou contra a greve por não concordar com algumas delas.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Guilherme</td>
+
+            <td>499******-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriela</td>
+
+            <td>375******-</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Laryssa</td>
+
+            <td>497*****-0</td>
+            <td>1 - Matemática</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>431*****-0</td>
+            <td>26 - Artes Cênicas</td>
+            <td>Abstenção</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não sou contra nem a favor. Muito pelo contrário...&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Felipe</td>
+
+            <td>362*****-1</td>
+            <td>4 - Física</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não acredito na greve como um recurso suficientemente bom pra alcançar esse resultado. &lt;br /&gt;Acho interessante pensar em um novo manifesto.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Andreia</td>
+
+            <td>427*****-4</td>
+            <td>56 - Licenciatura Integrada Química/Física</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Franciele</td>
+
+            <td>495*****-1</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Helena</td>
+
+            <td>384*****-6</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Victor</td>
+
+            <td>508*****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus</td>
+
+            <td>384*****-7</td>
+            <td>50 - Química Tecnológica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>William</td>
+
+            <td>391******-</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Eliane</td>
+
+            <td>400******-</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo</td>
+
+            <td>44.***.***-6</td>
+            <td>2 - Estatística</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mateus</td>
+
+            <td>415*****-6</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Vinicius</td>
+
+            <td>133******-</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mariana</td>
+
+            <td>439*****-9</td>
+            <td>33 - Dout.em Ciênc.Nutr.e do Esp. e Metabol.</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Discordo com a forma que está sendo conduzida e acredito que outros meios mais eficazes de chamar atenção para as revindicações devem ser debatidos. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Eric</td>
+
+            <td>445*****-9</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Aletícia</td>
+
+            <td>431*****-7</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luis</td>
+
+            <td>497****-</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rogério</td>
+
+            <td>-12*****7</td>
+            <td>11 - Dout. em Genética e Biologia Molecular</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Thaís</td>
+
+            <td>495*****-3</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Larissa</td>
+
+            <td>398******-</td>
+            <td>7 - Licenciatura em Letras - Português</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Tayna</td>
+
+            <td>436*****-9</td>
+            <td>4 - Física</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Eric</td>
+
+            <td>389*****-3</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fabrício</td>
+
+            <td>369*****-</td>
+            <td>47 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mateus</td>
+
+            <td>408*****-6</td>
+            <td>14 - Odontologia</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>368*****-4</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro</td>
+
+            <td>459*****-3</td>
+            <td>28 - Matemática Aplicada e Computacional</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>481*****-6</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Diante de tantas manifestações autoritárias de piquete, diante do último vídeo de alunos atrapalhando a aula do prof. Seguei Popov, incluindo apagando o quadro em que ele escrevia, não sou mais a favor da greve e da maneira como ela vem sendo feita. Greve é um direito, sim. Coibir pessoas para aderirem, não é e nunca será legítimo.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Mayara</td>
+
+            <td>487*****-1</td>
+            <td>2 - Mestrado em Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Paulo</td>
+
+            <td>436*****-5</td>
+            <td>14 - Odontologia</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Deborah</td>
+
+            <td>523*****-7</td>
+            <td>28 - Matemática Aplicada e Computacional</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luciano</td>
+
+            <td>357******-</td>
+            <td>200 -  Programa de Formação Interdisciplinar Superior - ProFIS</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Miguel</td>
+
+            <td>381*****-</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;depois de ler vários comentários das pessoas contra , eu concordo muito até mas eu me pergunto, onde elas estavam na hora da assembleia? poe que se elas estivessem desde o princípio, talvez nós nem tivéssemos começado essa greve. Mas agora que ja se passou quase 2 meses de greve, voces pretendem parar sem  termos ganhado nada em troca?&lt;br /&gt;Outro esclarecimento para quem é contra: ninguém gosta de greve. Eu ia amar estar tendo minhas aula pq é para isso que estou na faculdade, porque eu amo oque estudo, igual vocês. E para quem também não sabe é direito do aluno de se movimentar e é direito do professor não ter que dar a mesma aula duas vezes. Então são dois direitos contra o seu de ter aula.  &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Júlia</td>
+
+            <td>438*****-4</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Bruna</td>
+
+            <td>398*****-6</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Sarah</td>
+
+            <td>529****-</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Matheus</td>
+
+            <td>527******-</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Vitor</td>
+
+            <td>495*****-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gustavo</td>
+
+            <td>520******-</td>
+            <td>51 - Matemática/Física/Mat.Apl. e Comp.</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Nicole</td>
+
+            <td>534******-</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Thiago</td>
+
+            <td>485*****-5</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Abstenção</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>João</td>
+
+            <td>389*****-4</td>
+            <td>17 - Ciências Econômicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rodrigo</td>
+
+            <td>479*****-5</td>
+            <td>89 - Engenharia Ambiental</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Monisse</td>
+
+            <td>474*****-</td>
+            <td>51 - Doutorado em Matemática</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Murilo</td>
+
+            <td>454*****-4</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;movimento partidario oportunista que infringe o direito de muito alunos em querer estudar.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Vinicius</td>
+
+            <td>449*****-</td>
+            <td>60 - Superior Tecn. Análise e Desenv.Sistemas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Celso</td>
+
+            <td>259****-</td>
+            <td>10 - Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Rafael</td>
+
+            <td>409******-</td>
+            <td>44 - Ciências Sociais</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Pedro</td>
+
+            <td>376*****-0</td>
+            <td>3 - Mestrado em Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luana</td>
+
+            <td>415*****-0</td>
+            <td>14 - Odontologia</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marjorie</td>
+
+            <td>405*****-3</td>
+            <td>92 - Dout.na Área Int. Plan.Sist.Energéticos</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Ananda</td>
+
+            <td>524*****-</td>
+            <td>12 - Engenharia Civil</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A motivação da greve é legitima:a moradia estudantil. Perder algumas aulas é um preço muito baixo a se pagar para que nehum alino tenha que sair da unicamp porque não tem onde morar.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Jéssica</td>
+
+            <td>495*****-</td>
+            <td>14 - Odontologia</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Essa greve se iniciou contra o impeachment e eu sou totalmente a favor do impeachment, por isso eu não posso aderir a greve, pois estarei indo contra todos os meus princípios políticos.  E toda essa atitude de invadirem aulas,  obrigarem as pessoas aderirem a greve,  faz com que seja mais repugnante esse &amp;quot;movimento&amp;quot;.  Sou contra a greve e contra essas atitudes que os alunos grevistas estão fazendo. Pois é uma falta de respeito com os alunos que querem ter aula e com o professor que está dando a aula. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Igor</td>
+
+            <td>53.***.***-8</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Mirella</td>
+
+            <td>38.***.***-1</td>
+            <td>105 - Gestão de Empresas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>374*****-</td>
+            <td>48 - Arquitetura e Urbanismo</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Laura</td>
+
+            <td>375*****-</td>
+            <td>16 - Ciências Sociais</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marilia</td>
+
+            <td>384*****-</td>
+            <td>48 - Arquitetura e Urbanismo</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Lendo os comentários computados nessa votação percebi que muitos são contra o piquete, e não exatamente contra as pautas da greve. Eu mesma tenho algumas ressalvas quanto a ideia de greve como meio de reivindicação e acho que muitas das discussões políticas deveriam ser inclusas em nosso dia-a-dia de aula. Porém atualmente não vejo outra forma de conseguir fazer com que a faculdade pública se torne de fato pública e não atenda apenas a uma elite. A luta é para que mais pessoas possam entrar na universidade e mais pessoas possam ter o privilégio de querer ter suas aulas não piquetadas. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Lucas</td>
+
+            <td>383*****-4</td>
+            <td>55 - Geografia</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Luana</td>
+
+            <td>506*****-</td>
+            <td>48 - Arquitetura e Urbanismo</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;1. Acho que todo mundo concorda com o motes da greve. É quase óbvio que a questão da permanência estudantil é essencial, que o racismo é estrutural na nossa sociedade e que cotas são uma medida paliativa, porém necessária. Em relação aos cortes, a questão é um pouco mais complexa, mas ainda assim há alternativas a serem reivindicadas tanto para a reitoria (por exemplo, por que cortar aqui e não ali?) quanto para o governo estadual (seja pedir o aumento do repasse do icms, seja cobrar o repasse que o governo prometeu na construção do campus de limeira e que até hoje não pagou esse dinheiro, que somado ano a ano da entre 30 e 40 milhões).&lt;br /&gt;2. Reclamam que existe outras formas de pressão e reinvidicação, mas nunca dizem quais são elas. Mas além disso, como teríamos tempo para essas outras formas de manifestação tendo aulas e provas e trabalhos e estágios e pesquisa e... ?! A greve, além de instrumento de pressão, é também ter tempo para discutir, para pesquisar informações, para refletir. Eu estou aprendendo MUITO sobre os mais diversos assuntos, sobre como funciona um monte de coisa, crescendo como cidadã, etc. &lt;br /&gt;3. A maioria dos que se dizem contra a greve (tipo, uns 98% - ainda não conheci esses 2%, mas to na esperança de que eles existam) são contra ou por motivos extremamente egoísta (&amp;quot;quero minhas férias, que se dane quem tem que largar a faculdade pq os pais não conseguem bancar, ou mesmo quem nem tem acesso à faculdade pública&amp;quot;) ou são desinformados, argumentam com achismos, informações equivocadas, etc. Vi aqui nesse site mesmo uma justificativa que dizia que tudo começou com o DCE querendo greve por causa do golpe. Migo, antes da greve começar o DCE colou na assembleia do meu curso exatamente para convencer a gente a NÃO assinar o &amp;quot;Manifesto Contra o Golpe&amp;quot;. Vamos se informar primeiro, galera!&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Natália</td>
+
+            <td>370*****-7</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leonardo</td>
+
+            <td>439******-</td>
+            <td>49 - Engenharia de Controle e Automação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriela</td>
+
+            <td>404*****-9</td>
+            <td>4 - Física</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Giovana</td>
+
+            <td>397*****-9</td>
+            <td>58 - Fonoaudiologia</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Não acredito que greve seja o melhor caminho. Além disso, nem acho que greve deveria entrar em questão. Não existe greve de alunos, nós não temos um vínculo trabalhista com a Unicamp, mas enfim, esse é um assunto que deixo pra outro dia. &lt;br /&gt;Eu acho muito contraditório dizer que devemos pensar no coletivo, no próximo, sendo que não se pensa em todos quando tira o direito de quem quer dar aula, dar a aula e quem é contra o movimento e quer assistir a aula, mas não pode. &lt;br /&gt;Não existe garantia nenhuma de que os alunos não serão prejudicados e isso me preocupa muito. &lt;br /&gt;Mas o que mais me incomoda mesmo são os atos cheios de ódio exigindo direitos, tirando o direito do outro. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Pedro</td>
+
+            <td>449*****-5</td>
+            <td>48 - Arquitetura e Urbanismo</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Patrícia</td>
+
+            <td>578******-</td>
+            <td>18 - Linguística</td>
+            <td>Sim</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Flávio</td>
+
+            <td>376*****-1</td>
+            <td>34 - Engenharia de Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Marcia</td>
+
+            <td>54.***.***-6</td>
+            <td>5 - Química</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve dos estudantes é uma medida que está prejudicando muitos alunos, inclusive os que aderiram à greve.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Wellington</td>
+
+            <td>505******-</td>
+            <td>40 - Licenciatura em Física</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Porque é legitivo, votado em greve e tem pautas otimas!&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Felipe</td>
+
+            <td>340*****-7</td>
+            <td>53 - Doutorado em Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Maíra</td>
+
+            <td>475*****-9</td>
+            <td>6 - Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Leticia</td>
+
+            <td>578*****-1</td>
+            <td>38 - Pedagogia</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Sou das Humanas e me sinto muito prejudicada por esta e outras greves que já ocorreram. Acontece que o movimento sempre parte das Humanas, mas a maioria dos alunos não são a favor. Porém, nos falta voz para externalizar nossa postura, pq esse movimento e assembléias que acontecem e que se dizem tão &amp;quot;democráticos&amp;quot; são muito opressores com aqueles que tem opinião diferente. Uma grande hipocrisia! Com isso, estamos há quase dois meses sem aulas, enquanto o resto da Unicamp está lutando contra uma possível greve, ou seja, a nossa situação não é vista por nínguem e não sabemos o que fazer. Como fica nosso conteúdo depois? Nossa formação? Mesmo quando este movimento acabar nossas perdas serão drásticas. Não sou a favor da greve por esses motivos e também por que no final das contas acredito que nada se resolva, tudo continua do mesmo jeito, e o que se passa é que ao final um grande grupo de pessoas realizaram seu sonho de ter uma aventura de militância!&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Charles</td>
+
+            <td>484*****-5</td>
+            <td>51 - Doutorado em Matemática</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;O movimento grevista não é legítimo, as assembleias são esvaziadas, algumas pautas são razoáveis mas não há tentativa de negociar a greve é sempre a primeira opção e não a última, como deveria ser. Esse deveria ser o meio formal de se fazer votações na universidade, o número de pessoas que se atinge por aqui é muito maior, dizer que tem pessoas que não possui acesso a internet e ficarão de fora do processo é uma falácia, pois todos os alunos podem acessar os laboratórios de informática de seus institutos. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Ana</td>
+
+            <td>401*****-7</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Douglas</td>
+
+            <td>430*****-3</td>
+            <td>12 - Mestrado em Engenharia Civil</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Barbara</td>
+
+            <td>347*****-4</td>
+            <td>13 - Doutorado em Ecologia</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Tomás</td>
+
+            <td>382*****-8</td>
+            <td>5 - Química</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;sim&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Guido</td>
+
+            <td>470*****-3</td>
+            <td>15 - Medicina</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Maurício</td>
+
+            <td>200**********-</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Yana</td>
+
+            <td>487*****-9</td>
+            <td>29 - Licenciatura em Matemática</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Renato</td>
+
+            <td>360*****-9</td>
+            <td>10 - Mestrado em Engenharia Mecânica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Gabriel</td>
+
+            <td>397*****-5</td>
+            <td>11 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Greve muito enviesada e pouco efetiva... O movimento reivindica muita coisa e não consegue muito.&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Franco</td>
+
+            <td>452*****-6</td>
+            <td>19 - História</td>
+            <td>Sim</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;A greve é instrumento de reivindicação válido perante posicionamentos unilaterais. Muitas vezes, não há espaço para diálogo e apenas medidas que exerçam pressão acabam abrindo esses espaços. Além do mais, cada vez mais a administração universitária se fecha para a comunidade acadêmica, atendendo e reproduzindo interesses externos, que não refletem o projeto de universidade pública e gratuita a que a existência da UNICAMP visa atender. Dessa forma, com espaços institucionais muitas vezes viciados, mobilizações se tornam um meio válido de representação dos interesses da comunidade acadêmica, assim como da garantia de seus direitos e dos objetivos públicos da universidade. &#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Rebeca</td>
+
+            <td>483*****-9</td>
+            <td>46 - Licenciatura em Ciências Biológicas</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Alexandre</td>
+
+            <td>463*****-8</td>
+            <td>79 - Doutorado em Matemática Aplicada</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Laís</td>
+
+            <td>-15*****8</td>
+            <td>3 - Mestrado em Ciência da Computação</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Paulo</td>
+
+            <td>410*****-0</td>
+            <td>4 - Mestr.Prof. em Mat.Aplic.e Computacional</td>
+            <td>Não</td>
+
+            <td><button class="btn btn-success" onclick="myFunction(&#39;Palhaçada essa greve de alunos!&#39;)" data-toggle="modal" header="" data-target="#myModal" href="#">Ver Justificativa</button></td>
+            <script>
+                function myFunction(n) {
+                    document.getElementById("modal-text").innerHTML = n;
+                }
+                </script>
+
+        </tr>
+
+        <tr>
+            <td>Victória</td>
+
+            <td>394*****-2</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Amanda</td>
+
+            <td>359*****-4</td>
+            <td>2 - Estatística</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+        <tr>
+            <td>Fábio</td>
+
+            <td>463******-</td>
+            <td>41 - Engenharia Elétrica</td>
+            <td>Não</td>
+
+            <td>-</td>
+
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 id="modal-head" class="modal-title">Justificativa:</h4>
+            </div>
+            <div class="modal-body">
+                <p id="modal-text"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var $rows = $('#table tr');
+$('#search').keyup(function() {
+    var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+
+    $rows.show().filter(function() {
+        var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+        return !~text.indexOf(val);
+    }).hide();
+});
+</script>
+
+{% endblock %}

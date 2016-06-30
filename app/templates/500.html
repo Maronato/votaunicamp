@@ -6,8 +6,8 @@
 {% block content %}
 <div class="jumbotron text-center">
     <div class="container">
-        <h1>404: Oops!</h1>
-        <p>Essa página não existe!</p>
+        <h1>500: Erro de servidor!</h1>
+        <p>Algo deu muito errado!</p>
         <a type="button" class="btn btn-lg btn-info" href="/"><span class="glyphicon glyphicon-pencil"></span> Vote!</a>
         <a type="button" class="btn btn-lg btn-warning" href="/arguments/"><span class="glyphicon glyphicon-comment"></span> Discuta!</a>
         <a type="button" class="btn btn-lg btn-danger" href="/results/"><span class="glyphicon glyphicon-comment"></span> Resultados!</a>
@@ -15,9 +15,18 @@
 </div>
 <div class=container>
     <h2>
-        O gatinho medieval vai te ajudar a encontrar o caminho de volta
+        Por favor, entre em contato comigo por um dos seguintes canais:
     </h2>
-    <img src="{% static 'kitten.png'%}"width="700">
+    <li>
+        <a href="http://facebook.com/gustavo.maronato">Facebook</a>
+    </li>
+    <li>
+        Telegram, <a href="https://telegram.me/GustavoMaronato">@GustavoMaronato</a>
+    </li>
+    <li>
+        Ou por email: votaunicamp@gmail.com
+    </li>
+
 </div>
 
 
