@@ -241,28 +241,43 @@ def help_page(request):
 def down_stats(request):
     total = yes = no = abs = 0
     for profs in Profile.objects.all():
-        total += 1
-        if profs.vote.vote == u'Sim':
-            yes += 1
-        elif profs.vote.vote == u'Não':
-            no += 1
-        else:
-            abs += 1
+        try:
+            u = profs.vote.vote
+            total += 1
+            if profs.vote.vote == u'Sim':
+                yes += 1
+            elif profs.vote.vote == u'Não':
+                no += 1
+            else:
+                abs += 1
+        except:
+            pass
     open('stats.txt', 'w+')
     with open("stats.txt", "a") as stats:
         stats.write(str(yes) + ", " + str(no) + ", " + str(abs) + "\n")
-
-        for institution in Profile.objects.values_list('course', flat=True).distinct():
+        uinst = []
+        for profs in Profile.objects.all():
+            try:
+                if profs.vote:
+                    uinst.append(profs.course)
+            except:
+                pass
+        uinst = set(uinst)
+        for institution in uinst:
             list = Profile.objects.filter(course=institution)
-            totali = len(list)
+            totali = 0
             yesi = noi = absi = 0
             for student in list:
-                if student.vote.vote == u'Sim':
-                    yesi += 1
-                elif student.vote.vote == u'Não':
-                    noi += 1
-                else:
-                    absi += 1
+                try:
+                    if student.vote.vote == u'Sim':
+                        yesi += 1
+                    elif student.vote.vote == u'Não':
+                        noi += 1
+                    else:
+                        absi += 1
+                    totali += 1
+                except:
+                    pass
             stats.write(institution.encode('utf-8'))
             stats.write(", " + str(yesi) + ", " + str(noi) + ", " + str(absi) + "\n")
     stats.close()
