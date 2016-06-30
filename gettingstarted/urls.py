@@ -73,12 +73,6 @@ urlpatterns = [
     # delete account
     url(r'delete_account/$', views.delete_account, name='delete_account'),
 
-    # test
-    url(r'test/$', views.test, name='test'),
-
-    # update
-    url(r'update/$', views.update, name='update'),
-
     # Admins
     url(r'^admin/', include(admin.site.urls)),
 ]

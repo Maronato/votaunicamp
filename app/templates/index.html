@@ -37,10 +37,9 @@
         </div>
         <div class="col-md-6">
             <h3><span class="glyphicon glyphicon-comment"></span>   Pautas Atuais</h3>
-            <ul>
-                <li>Piquetes</li>
-                <li>Ocupações</li>
-            </ul>
+            <ul><h4>
+                <li>Piquetes e Ocupações</li>
+            </ul></h4>
         </div>
     </div> <!-- row -->
     <div class="row">
@@ -91,7 +90,7 @@
                     {% csrf_token %}
                     <h3><span class="glyphicon glyphicon-pencil"></span>   Vote!  </h3>
                     <div class="form-group">
-                        <label class="control-label">Você é a favor? </label>
+                        <label class="control-label">Você é a favor da pauta atual? </label>
                         <input type="radio" id="vote_0" value="Sim" {{vote_0}} name="vote" />
                         <label for="vote_0">
                             Sim
