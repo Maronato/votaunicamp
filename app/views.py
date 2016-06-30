@@ -414,7 +414,6 @@ def update(request):
     for profile in Profile.objects.all():
         nick = email_functions.gen_random_nickname()
         profile.nickname = nick
-    send_email_all()
     return redirect('index')
 
 
